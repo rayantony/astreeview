@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geekees.Common.Controls", "Geekees.Common.Controls\Geekees.Common.Controls.csproj", "{EE523768-F0C5-48C0-8B22-66ED4895FE6B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geekees.Common.Controls.Demo", "Geekees.Common.Controls.Demo\Geekees.Common.Controls.Demo.csproj", "{B1A18485-DED6-450F-BA5F-64BA10968CFA}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{112FAB98-8405-442A-A09B-9B0FF2F82A7B}") = "Geekees.Common.Controls.Obfuscation", "Geekees.Common.Controls.Obfuscation\Geekees.Common.Controls.Obfuscation.dotfuproj", "{4B87460F-54CC-43AF-90FB-C5802472CD62}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE523768-F0C5-48C0-8B22-66ED4895FE6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE523768-F0C5-48C0-8B22-66ED4895FE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE523768-F0C5-48C0-8B22-66ED4895FE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE523768-F0C5-48C0-8B22-66ED4895FE6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A18485-DED6-450F-BA5F-64BA10968CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A18485-DED6-450F-BA5F-64BA10968CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A18485-DED6-450F-BA5F-64BA10968CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A18485-DED6-450F-BA5F-64BA10968CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B87460F-54CC-43AF-90FB-C5802472CD62}.Debug|Any CPU.ActiveCfg = Debug
+		{4B87460F-54CC-43AF-90FB-C5802472CD62}.Debug|Any CPU.Build.0 = Debug
+		{4B87460F-54CC-43AF-90FB-C5802472CD62}.Release|Any CPU.ActiveCfg = Release
+		{4B87460F-54CC-43AF-90FB-C5802472CD62}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
