@@ -42,6 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ASTreeViewDemo1.aspx" />
+    <Content Include="ASTreeViewDemo2.aspx" />
+    <Content Include="ASTreeViewDemo3.aspx" />
+    <Content Include="ASTreeViewDemo4.aspx" />
+    <Content Include="ASTreeViewDemo5.aspx" />
+    <Content Include="ASTreeViewDemo6.aspx" />
+    <Content Include="ASTreeViewDemo7.aspx" />
+    <Content Include="db\NorthWind.mdb">
+    </Content>
     <Content Include="Images\demoIcons\accor.gif" />
     <Content Include="Images\demoIcons\accorhospitality.gif" />
     <Content Include="Images\demoIcons\accorservices.gif" />
@@ -81,11 +89,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASTreeViewDemo1.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>ASTreeViewDemo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ASTreeViewDemo1.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo2.aspx.cs">
+      <DependentUpon>ASTreeViewDemo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASTreeViewDemo2.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo3.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo3.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo4.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo4.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo5.aspx.cs">
+      <DependentUpon>ASTreeViewDemo5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASTreeViewDemo5.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo6.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo6.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo7.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo7.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

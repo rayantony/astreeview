@@ -13,7 +13,7 @@ using Geekees.Common.Utilities.Xml;
 
 namespace Geekees.Common.Controls.Demo
 {
-	public partial class ASTreeViewDemo1 : System.Web.UI.Page
+	public partial class ASTreeViewDemo1 : PageBase
 	{
 		protected void Page_Load( object sender, EventArgs e )
 		{
