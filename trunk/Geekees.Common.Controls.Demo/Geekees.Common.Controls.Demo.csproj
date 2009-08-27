@@ -41,15 +41,19 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ASTreeViewDeleteNodeProvider.aspx" />
     <Content Include="ASTreeViewDemo1.aspx" />
     <Content Include="ASTreeViewDemo2.aspx" />
     <Content Include="ASTreeViewDemo3.aspx" />
     <Content Include="ASTreeViewDemo4.aspx" />
+    <Content Include="ASTreeViewDemo4_Sample_Data.xml" />
     <Content Include="ASTreeViewDemo5.aspx" />
     <Content Include="ASTreeViewDemo6.aspx" />
     <Content Include="ASTreeViewDemo7.aspx" />
+    <Content Include="ASTreeViewRenameNodeHandler.aspx" />
     <Content Include="db\NorthWind.mdb">
     </Content>
+    <Content Include="Header.ascx" />
     <Content Include="Images\demoIcons\accor.gif" />
     <Content Include="Images\demoIcons\accorhospitality.gif" />
     <Content Include="Images\demoIcons\accorservices.gif" />
@@ -58,6 +62,8 @@
     <Content Include="Images\demoIcons\microsoft.gif" />
     <Content Include="Images\demoIcons\msdn.gif" />
     <Content Include="Images\demoIcons\picasa.gif" />
+    <Content Include="Javascript\asdropdowntreeview\dropdowntreeview.css" />
+    <Content Include="Javascript\asdropdowntreeview\images\windropdown.gif" />
     <Content Include="Javascript\astreeview\astreeview.css" />
     <Content Include="Javascript\astreeview\astreeview_packed.js" />
     <Content Include="Javascript\astreeview\images\astreeview-bottom-line.gif" />
@@ -88,6 +94,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASTreeViewDeleteNodeProvider.aspx.cs">
+      <DependentUpon>ASTreeViewDeleteNodeProvider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASTreeViewDeleteNodeProvider.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDeleteNodeProvider.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASTreeViewDemo1.aspx.cs">
       <DependentUpon>ASTreeViewDemo1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,6 +150,21 @@
     <Compile Include="ASTreeViewDemo7.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo7.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASTreeViewRenameNodeHandler.aspx.cs">
+      <DependentUpon>ASTreeViewRenameNodeHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASTreeViewRenameNodeHandler.aspx.designer.cs">
+      <DependentUpon>ASTreeViewRenameNodeHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OleDbHelper.cs" />
     <Compile Include="PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
