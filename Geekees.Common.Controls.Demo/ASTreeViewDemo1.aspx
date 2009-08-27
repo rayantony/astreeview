@@ -1,5 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASTreeViewDemo1.aspx.cs" Inherits="Geekees.Common.Controls.Demo.ASTreeViewDemo1" %>
 
+<%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc1" %>
+
 <%@ Register Assembly="Geekees.Common.Controls" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -15,6 +17,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    
+	<uc1:Header id="Header1" runat="server"></uc1:Header>
+	<h2>General Tree </h2>
     <div>
 		<asp:Button ID="btnToggleDragDrop" CssClass="button" runat="server" Text="EnableDragDrop" OnClick="btnToggleDragDrop_Click" />
 		<asp:Button ID="btnToggleTreeLines" CssClass="button" runat="server" Text="EnableTreeLines" OnClick="btnToggleTreeLines_Click" />
