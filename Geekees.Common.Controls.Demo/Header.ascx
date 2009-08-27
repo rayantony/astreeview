@@ -1,6 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="Geekees.Common.Controls.Demo.Header" %>
+<h2>ASTreeView Demo</h2>
+<h5>by <a href="http://www.jinweijie.com">jinweijie.com</a> visit: <a href="http://www.geekees.com/astreeviewdemo/astreeviewdemo1.aspx">online sample</a> contact me:<a href="mailto:seiecnu@gmail.com">seiecnu@gmail.com</a></h5>
+
+<hr />
 <div>
 	<ul id="MainTabs">
+		<li style="float:left;margin:4px;color:Green;" id="liASTreeViewDemo0" runat="server">Samples:</li>
 		<li style="float:left;margin:4px;" id="liASTreeViewDemo1" runat="server"><asp:HyperLink ID="ashlASTreeViewDemo1" runat="server" Text="ASTreeViewDemo1" NavigateUrl="~/ASTreeViewDemo1.aspx" /></li>
 		<li style="float:left;margin:4px;" id="liASTreeViewDemo2" runat="server"><asp:HyperLink ID="ashlASTreeViewDemo2" runat="server" Text="ASTreeViewDemo2" NavigateUrl="~/ASTreeViewDemo2.aspx" /></li>
 		<li style="float:left;margin:4px;" id="liASTreeViewDemo3" runat="server"><asp:HyperLink ID="ashlASTreeViewDemo3" runat="server" Text="ASTreeViewDemo3" NavigateUrl="~/ASTreeViewDemo3.aspx" /></li>
