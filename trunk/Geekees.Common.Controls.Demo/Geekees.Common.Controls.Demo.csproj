@@ -172,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="a.rar" />
+    <None Include="astreeview-node.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Javascript\astreeview\images\.svn\all-wcprops" />
     <None Include="Javascript\astreeview\images\.svn\entries" />
     <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview-bottom-line.gif.svn-base" />
