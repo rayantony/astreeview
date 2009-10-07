@@ -10,6 +10,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Geekees.Common.Controls.Demo</RootNamespace>
     <AssemblyName>Geekees.Common.Controls.Demo</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Geekees.Common.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Geekees.Common.Controls, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -50,6 +54,7 @@
     <Content Include="ASTreeViewDemo5.aspx" />
     <Content Include="ASTreeViewDemo6.aspx" />
     <Content Include="ASTreeViewDemo7.aspx" />
+    <Content Include="ASTreeViewDemo8.aspx" />
     <Content Include="ASTreeViewRenameNodeHandler.aspx" />
     <Content Include="db\NorthWind.mdb">
     </Content>
@@ -149,6 +154,13 @@
     </Compile>
     <Compile Include="ASTreeViewDemo7.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo8.aspx.cs">
+      <DependentUpon>ASTreeViewDemo8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASTreeViewDemo8.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo8.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASTreeViewRenameNodeHandler.aspx.cs">
       <DependentUpon>ASTreeViewRenameNodeHandler.aspx</DependentUpon>
