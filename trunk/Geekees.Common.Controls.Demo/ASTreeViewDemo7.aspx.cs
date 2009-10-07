@@ -33,7 +33,8 @@ namespace Geekees.Common.Controls.Demo
 		{
 
 			XmlDocument doc = new XmlDocument();
-			doc.Load( Server.MapPath( "~/ASTreeViewDemo4_Sample_Data.xml" ) );
+			string path = Server.MapPath( "~/ASTreeViewDemo4_Sample_Data.xml" );
+			doc.Load( path );
 
 			ASTreeViewXMLDescriptor descripter = new ASTreeViewXMLDescriptor();
 
