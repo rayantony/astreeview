@@ -21,17 +21,12 @@ Project("{112FAB98-8405-442A-A09B-9B0FF2F82A7B}") = "Geekees.Common.Controls.Obf
 EndProject
 Global
 	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = Geekees.Common.Controls.Obfuscation\\Geekees.Common.Controls.Obfuscation.dotfuproj
+		SccProjectName0 = \u0022$/Geekees.Common.Controls/03.source/Geekees.Common.Controls.root/Geekees.Common.Controls\u0022,\u0020MEJAAAAA
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = Geekees.Common.Controls.Demo\\Geekees.Common.Controls.Demo.csproj
-		SccLocalPath1 = .
-		SccProjectFilePathRelativizedFromConnection1 = Geekees.Common.Controls.Demo\\
-		SccProjectUniqueName2 = Geekees.Common.Controls\\Geekees.Common.Controls.csproj
-		SccProjectName2 = \u0022$/Geekees.Common.Controls/03.source/Geekees.Common.Controls.root/Geekees.Common.Controls/Geekees.Common.Controls\u0022,\u0020PEJAAAAA
-		SccLocalPath2 = Geekees.Common.Controls
-		SccProjectUniqueName3 = Geekees.Common.Controls.Obfuscation\\Geekees.Common.Controls.Obfuscation.dotfuproj
-		SccLocalPath3 = .
-		SccProjectFilePathRelativizedFromConnection3 = Geekees.Common.Controls.Obfuscation\\
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectFilePathRelativizedFromConnection0 = Geekees.Common.Controls.Obfuscation\\
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
