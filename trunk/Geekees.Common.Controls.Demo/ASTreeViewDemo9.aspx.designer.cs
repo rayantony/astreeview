@@ -12,12 +12,12 @@ namespace Geekees.Common.Controls.Demo {
     
     
     /// <summary>
-    /// ASTreeViewDemo6 class.
+    /// ASTreeViewDemo9 class.
     /// </summary>
     /// <remarks>
     /// Auto-generated class.
     /// </remarks>
-    public partial class ASTreeViewDemo6 {
+    public partial class ASTreeViewDemo9 {
         
         /// <summary>
         /// Head1 control.
@@ -47,40 +47,31 @@ namespace Geekees.Common.Controls.Demo {
         protected global::Geekees.Common.Controls.Demo.Header Header1;
         
         /// <summary>
-        /// btnGetCheckedNodes control.
+        /// btnClearConsole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGetCheckedNodes;
+        protected global::System.Web.UI.WebControls.Button btnClearConsole;
         
         /// <summary>
-        /// btnGetSelectedNode control.
+        /// btnIterateNodes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGetSelectedNode;
+        protected global::System.Web.UI.WebControls.Button btnIterateNodes;
         
         /// <summary>
-        /// btnChangeDropdownText control.
+        /// btnTraverseNodes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnChangeDropdownText;
-        
-        /// <summary>
-        /// btnToggleCloseOnNodeSelection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleCloseOnNodeSelection;
+        protected global::System.Web.UI.WebControls.Button btnTraverseNodes;
         
         /// <summary>
         /// astvMyTree control.
@@ -89,16 +80,7 @@ namespace Geekees.Common.Controls.Demo {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Geekees.Common.Controls.ASDropDownTreeView astvMyTree;
-        
-        /// <summary>
-        /// astvMyTree2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Geekees.Common.Controls.ASDropDownTreeView astvMyTree2;
+        protected global::Geekees.Common.Controls.ASTreeView astvMyTree;
         
         /// <summary>
         /// divConsole control.
