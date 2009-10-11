@@ -23,7 +23,8 @@
 		<asp:Button ID="btnClearConsole" CssClass="button" runat="server" Text="Clear Console" OnClick="btnClearConsole_Click" />
 		<asp:Button ID="btnIterateNodes" CssClass="button" runat="server" Text="Iterate Nodes" OnClick="btnIterateNodes_Click" />
 		<asp:Button ID="btnTraverseNodes" CssClass="button" runat="server" Text="Traverse Nodes" OnClick="btnTraverseNodes_Click" />
-			
+		<asp:Button  ID="btnResolveNodesModification" CssClass="button" runat="server" Text="ResolveNodesModification" OnClick="btnResolveNodesModification_Click" />
+					
     </div>
     <div>
 		<table>
@@ -35,14 +36,15 @@
 						DataTableRootNodeValue="0"
 						EnableRoot="false" 
 						EnableNodeSelection="true" 
-						EnableCheckbox="true" 
+						EnableCheckbox="false" 
 						EnableDragDrop="true" 
 						EnableTreeLines="false"
 						EnableNodeIcon="true"
 						EnableCustomizedNodeIcon="false"
-						AutoPostBack="true"
+						AutoPostBack="false"
 						EnableDebugMode="false"
-						EnableContextMenu="false" />
+						EnableContextMenu="true"
+						EnableContextMenuAdd="false" />
 				</td>
 				<td>
 				
