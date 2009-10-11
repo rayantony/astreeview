@@ -23,7 +23,8 @@
 		<asp:Button ID="btnGetCheckedNodes" CssClass="button" runat="server" Text="GetCheckedNodes" OnClick="btnGetCheckedNodes_Click" ValidationGroup="vgCheck"/>
 		<asp:Button ID="btnGetSelectedNode" CssClass="button" runat="server" Text="GetSelectedNode" OnClick="btnGetSelectedNode_Click" ValidationGroup="vgSelect" />
 		<asp:Button ID="btnChangeDropdownText" CssClass="button" runat="server" Text="ChangeDropdownText" OnClick="btnChangeDropdownText_Click" />
-	
+		<asp:Button ID="btnToggleCloseOnNodeSelection" CssClass="button" runat="server" Text="EnableCloseOnNodeSelection" OnClick="btnToggleCloseOnNodeSelection_Click" />
+
     </div>
      <div>
 		<table>

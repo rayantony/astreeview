@@ -28,6 +28,14 @@ namespace Geekees.Common.Controls.Demo
 				GenerateTree();
 		}
 
+		protected override void OnPreRender( EventArgs e )
+		{
+			base.OnPreRender( e );
+
+			this.btnToggleCloseOnNodeSelection.Text = this.astvMyTree2.EnableCloseOnNodeSelection ?
+				"DisableCloseOnNodeSelection" : "EnableCloseOnNodeSelection";
+		}
+
 		private void GenerateTree()
 		{
 
@@ -96,6 +104,11 @@ namespace Geekees.Common.Controls.Demo
 
 			this.divConsole.InnerHtml += ( ">>Text has been changed.<br />" );
 
+		}
+
+		protected void btnToggleCloseOnNodeSelection_Click( object sender, EventArgs e )
+		{
+			this.astvMyTree2.EnableCloseOnNodeSelection = !this.astvMyTree2.EnableCloseOnNodeSelection;
 		}
 	}
 }

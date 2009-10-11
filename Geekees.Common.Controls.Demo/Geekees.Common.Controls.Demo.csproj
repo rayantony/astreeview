@@ -33,7 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Geekees.Common.Controls, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Geekees.Common.Controls, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Geekees.Common.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -55,6 +58,7 @@
     <Content Include="ASTreeViewDemo6.aspx" />
     <Content Include="ASTreeViewDemo7.aspx" />
     <Content Include="ASTreeViewDemo8.aspx" />
+    <Content Include="ASTreeViewDemo9.aspx" />
     <Content Include="ASTreeViewRenameNodeHandler.aspx" />
     <Content Include="db\NorthWind.mdb">
     </Content>
@@ -161,6 +165,13 @@
     </Compile>
     <Compile Include="ASTreeViewDemo8.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo9.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo9.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo9.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASTreeViewRenameNodeHandler.aspx.cs">
       <DependentUpon>ASTreeViewRenameNodeHandler.aspx</DependentUpon>
