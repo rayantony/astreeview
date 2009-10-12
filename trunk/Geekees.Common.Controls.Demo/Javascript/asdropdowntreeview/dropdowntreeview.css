@@ -1,5 +1,6 @@
 .defaultDropdownBoxContainer{}
 .defaultDropdownBox{ background-color:#fff; border:1px solid #ababab;cursor:default; }
+.defaultDropdownTreeObjectContainer{}
 .defaultDropdownTree{ background-color:#fff; border-right:1px solid #ababab;border-bottom:1px solid black;border-left:1px solid black; }
 .defaultDropdownIconA{ cursor:default; }
 .defaultDropdownIconA:hover{border:0px;}
