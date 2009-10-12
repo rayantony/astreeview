@@ -37,10 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Geekees.Common.Controls, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Geekees.Common.Controls.dll</HintPath>
-    </Reference>
+    <Reference Include="Geekees.Common.Controls, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -80,27 +77,20 @@
     <Content Include="Javascript\astreeview\astreeview.css" />
     <Content Include="Javascript\astreeview\astreeview_packed.js" />
     <Content Include="Javascript\astreeview\images\astreeview-bottom-line.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-checkbox-checked.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-folder-open.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-folder.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-middle-line.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-minus.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-node.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-plus.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-root-line.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-top-line.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-vertical-line.gif" />
-    <Content Include="Javascript\astreeview\images\astreeview_folder.gif" />
-    <Content Include="Javascript\astreeview\images\astreeview_folder_open.gif" />
-    <Content Include="Javascript\astreeview\images\astreeview_minus.gif" />
-    <Content Include="Javascript\astreeview\images\astreeview_node.gif" />
-    <Content Include="Javascript\astreeview\images\astreeview_plus.gif" />
-    <Content Include="Javascript\astreeview\images\checkbox-checked.gif" />
-    <Content Include="Javascript\astreeview\images\checkbox-half-checked.gif" />
-    <Content Include="Javascript\astreeview\images\checkbox-unchecked.gif" />
-    <Content Include="Javascript\astreeview\images\context-menu-gradient.gif" />
-    <Content Include="Javascript\astreeview\images\dragDrop_ind1.gif" />
-    <Content Include="Javascript\astreeview\images\dragDrop_ind2.gif" />
-    <Content Include="Javascript\astreeview\images\folder_close.gif" />
-    <Content Include="Javascript\astreeview\images\folder_dots.gif" />
-    <Content Include="Javascript\astreeview\images\folder_folder.gif" />
-    <Content Include="Javascript\astreeview\images\folder_lastsub.gif" />
-    <Content Include="Javascript\astreeview\images\folder_open.gif" />
-    <Content Include="Javascript\astreeview\images\folder_sub.gif" />
     <Content Include="Javascript\contextmenu\contextmenu.css" />
     <Content Include="Javascript\contextmenu\contextmenu_packed.js" />
     <Content Include="Library\Geekees.Common.Controls.dll" />
@@ -202,58 +192,6 @@
     <None Include="astreeview-node.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Javascript\astreeview\images\.svn\all-wcprops" />
-    <None Include="Javascript\astreeview\images\.svn\entries" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview-bottom-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview-middle-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview-root-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview-top-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview-vertical-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview_folder.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview_folder_open.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview_minus.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview_node.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\astreeview_plus.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\checkbox-checked.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\checkbox-half-checked.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\checkbox-unchecked.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\context-menu-gradient.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\dragDrop_ind1.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\dragDrop_ind2.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\folder_close.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\folder_dots.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\folder_folder.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\folder_lastsub.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\folder_open.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\prop-base\folder_sub.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview-bottom-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview-middle-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview-root-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview-top-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview-vertical-line.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview_folder.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview_folder_open.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview_minus.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview_node.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\astreeview_plus.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\checkbox-checked.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\checkbox-half-checked.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\checkbox-unchecked.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\context-menu-gradient.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\dragDrop_ind1.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\dragDrop_ind2.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\folder_close.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\folder_dots.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\folder_folder.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\folder_lastsub.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\folder_open.gif.svn-base" />
-    <None Include="Javascript\astreeview\images\.svn\text-base\folder_sub.gif.svn-base" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Javascript\astreeview\images\.svn\props\" />
-    <Folder Include="Javascript\astreeview\images\.svn\tmp\prop-base\" />
-    <Folder Include="Javascript\astreeview\images\.svn\tmp\props\" />
-    <Folder Include="Javascript\astreeview\images\.svn\tmp\text-base\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
