@@ -47,8 +47,7 @@ return hook(v);}
 return walk(j);}
 return j;}}catch(e){}
 throw new SyntaxError("parseJSON");};if(typeof(rdcjs)=="undefined")
-_rdc=rdcjs={};if(!$){var $=function(id){return"string"==typeof id?document.getElementById(id):id;};}
-_rdc.a1=function(className,tag,elm){var testClass=new RegExp("(^|\\s)"+className+"(\\s|$)");var tag=tag||"*";var elm=elm||document;var elements=(tag=="*"&&elm.all)?elm.all:elm.getElementsByTagName(tag);var returnElements=[];var current;var length=elements.length;for(var i=0;i<length;i++){current=elements[i];if(testClass.test(current.className)){returnElements.push(current);}}
+_rdc=rdcjs={};_rdc.$=function(id){return"string"==typeof id?document.getElementById(id):id;};_rdc.a1=function(className,tag,elm){var testClass=new RegExp("(^|\\s)"+className+"(\\s|$)");var tag=tag||"*";var elm=elm||document;var elements=(tag=="*"&&elm.all)?elm.all:elm.getElementsByTagName(tag);var returnElements=[];var current;var length=elements.length;for(var i=0;i<length;i++){current=elements[i];if(testClass.test(current.className)){returnElements.push(current);}}
 return returnElements;}
 _rdc.a2=function(){this.obj=(arguments.length)?arguments[0]:window;return this;}
 _rdc.a2.prototype.setInterval=function(func,msec){var i=_rdc.a2.getNew();var t=_rdc.a2.buildCall(this.obj,i,arguments);_rdc.a2.set[i].timer=window.setInterval(t,msec);return i;}
@@ -129,8 +128,8 @@ folderIcon.src=this.b2+this.b3;else if(parentNode.getAttribute("openState")==_rd
 folderIcon.src=this.b2+this.b4;}}
 if(e){if(this.b48)
 this.d72();}
-return false;},d34:function(inputId,state){if(!inputId||!$(inputId))
-return;var imgPlus=$(inputId).getElementsByTagName('IMG')[0];if(imgPlus.style.visibility=='hidden')return;var liNode=imgPlus.parentNode;if(state==_rdc.ASTreeView.Consts.c1111){imgPlus.src=imgPlus.src=this.b2+this.b7;var ul=liNode.getElementsByTagName('UL')[0];ul.style.display='block';}
+return false;},d34:function(inputId,state){if(!inputId||!_rdc.$(inputId))
+return;var imgPlus=_rdc.$(inputId).getElementsByTagName('IMG')[0];if(imgPlus.style.visibility=='hidden')return;var liNode=imgPlus.parentNode;if(state==_rdc.ASTreeView.Consts.c1111){imgPlus.src=imgPlus.src=this.b2+this.b7;var ul=liNode.getElementsByTagName('UL')[0];ul.style.display='block';}
 else if(state==_rdc.ASTreeView.Consts.c11111){imgPlus.src=imgPlus.src=this.b2+this.b6;liNode.getElementsByTagName('UL')[0].style.display='none';}},d35:function(e)
 {var evt=e||window.event;var currentNode=evt.target||evt.srcElement;if(document.all)e=event;this.b18.style.left=this.c7(e)+'px';this.b18.style.top=this.c8(e)+'px';var subs=this.b18.getElementsByTagName('LI');if(subs.length>0){if(this.b9){this.b10.insertBefore(this.b11,this.b9);}else{this.b10.appendChild(this.b11);}}
 this.b11=currentNode.parentNode;this.b10=currentNode.parentNode.parentNode;this.b9=false;if(this.b11.nextSibling){this.b9=this.b11.nextSibling;}
@@ -302,8 +301,8 @@ return;if(!this.b39){if(this.__d59(node).length>0)
 return;}
 this.d71();elm.className=this.b33+" "+elm.className;this.b32=node.id;node.setAttribute("selected","true");if(this.b48)
 this.d72();this.b50(e);},d71:function(){var astree=document.getElementById(this.b1);var children=astree.getElementsByTagName("LI");for(var i=0;i<children.length;i++){children[i].removeAttribute("selected");var lastA=this.d75(children[i],"A");if(lastA)
-lastA.className=lastA.className.replace(this.b33,"");}},d72:function(){if(this.b37!=""&&$(this.b37))
-$(this.b37).value=_rdc.JsonHelper.toArrayJSONString(this.d43());},d73:function(){return this.b1;},d74:function(id){var result=false;for(var i=0;i<this.b47.length;i++){if(eval(this.b47[i]+".d73()")==id){return this.b47[i];break;}}
+lastA.className=lastA.className.replace(this.b33,"");}},d72:function(){if(this.b37!=""&&_rdc.$(this.b37))
+_rdc.$(this.b37).value=_rdc.JsonHelper.toArrayJSONString(this.d43());},d73:function(){return this.b1;},d74:function(id){var result=false;for(var i=0;i<this.b47.length;i++){if(eval(this.b47[i]+".d73()")==id){return this.b47[i];break;}}
 return result;},d75:function(parent,tag){for(var i=0;i<parent.childNodes.length;i++){if(parent.childNodes[i].tagName==tag)
 return parent.childNodes[i]}
 return null;},getIcon:function(parentObj,iconType){for(var i=0;i<parentObj.childNodes.length;i++){var cur=parentObj.childNodes[i];if(cur.tagName!="IMG")

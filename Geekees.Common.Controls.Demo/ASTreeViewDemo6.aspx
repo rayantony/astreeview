@@ -42,7 +42,7 @@
 						EnableNodeIcon="true"
 						EnableCustomizedNodeIcon="false"
 						EnableDebugMode="false"
-						EnableRequiredValidator="true"
+						EnableRequiredValidator="false"
 						InitialDropdownText="Please check" 
 						Width="300"
 						EnableCloseOnOutsideClick="true" 
