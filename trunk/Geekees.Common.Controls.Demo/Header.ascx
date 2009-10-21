@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="Geekees.Common.Controls.Demo.Header" %>
 <h2>ASTreeView Demo</h2>
-<h5>by <a href="http://www.jinweijie.com">jinweijie.com</a> visit: <a href="http://www.geekees.com/astreeviewdemo/astreeviewdemo1.aspx">online sample</a> contact me:<a href="mailto:seiecnu@gmail.com">seiecnu@gmail.com</a></h5>
+<h5>by <a href="http://www.jinweijie.com">jinweijie.com</a> visit: <a href="http://www.astreeview.com">online sample</a> contact me:<a href="mailto:seiecnu@gmail.com">seiecnu@gmail.com</a></h5>
 
 <hr />
 <div>
