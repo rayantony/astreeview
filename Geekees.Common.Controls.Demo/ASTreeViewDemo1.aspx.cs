@@ -23,6 +23,8 @@ namespace Geekees.Common.Controls.Demo
 
 		private void GenerateTree()
 		{
+			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu", "alert('current value:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().parentNode.getAttribute('treeNodeValue')" + ");return false;", "text" ) );
+
 			this.astvMyTree.RootNode
 								.AppendChild( new ASTreeViewLinkNode( "Accor", "Accor", "http://www.accor.com", "_self", "Goto Accor", "~/Images/demoIcons/accor.gif" )
 													.AppendChild( new ASTreeViewLinkNode( "Accor Services", "Accor Services", "http://www.accorservices.com", "_self", "Goto Accor Services", "~/Images/demoIcons/accorservices.gif" ) )
@@ -45,7 +47,9 @@ namespace Geekees.Common.Controls.Demo
 			this.btnExpandAllClient.Attributes.Add( "onclick", this.astvMyTree.GetExpandAllScript() + "return false;" );
 			this.btnCollapseAllClient.Attributes.Add( "onclick", this.astvMyTree.GetCollapseAllScript() + "return false;" );
 			this.btnToggleExpandCollapseAllClient.Attributes.Add( "onclick", this.astvMyTree.GetToggleExpandCollapseAllScript() + "return false;" );
-			
+		
+			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu", "alert('current value:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().parentNode.getAttribute('treeNodeValue')" + ");return false;", "text" ) );
+
 		}
 
 		protected override void OnPreRender( EventArgs e )
