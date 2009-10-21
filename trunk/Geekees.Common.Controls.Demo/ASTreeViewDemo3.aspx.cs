@@ -20,6 +20,13 @@ namespace Geekees.Common.Controls.Demo
 {
 	public partial class ASTreeViewDemo3 : PageBase
 	{
+		protected override void OnInit( EventArgs e )
+		{
+			base.OnInit( e );
+			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu 1", "alert('current value:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().parentNode.getAttribute('treeNodeValue')" + ");return false;", "otherevent" ) );
+			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu 2", "alert('current text:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().innerHTML" + ");return false;", "otherevent" ) );
+		}
+
 		protected void Page_Load( object sender, EventArgs e )
 		{
 			if( !IsPostBack )
