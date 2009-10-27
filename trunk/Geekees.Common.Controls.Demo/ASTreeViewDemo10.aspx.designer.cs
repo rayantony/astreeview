@@ -12,12 +12,12 @@ namespace Geekees.Common.Controls.Demo {
     
     
     /// <summary>
-    /// ASTreeViewDemo9 class.
+    /// ASTreeViewDemo10 class.
     /// </summary>
     /// <remarks>
     /// Auto-generated class.
     /// </remarks>
-    public partial class ASTreeViewDemo9 {
+    public partial class ASTreeViewDemo10 {
         
         /// <summary>
         /// Head1 control.
@@ -38,6 +38,15 @@ namespace Geekees.Common.Controls.Demo {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lASTreeViewThemeCssFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lASTreeViewThemeCssFile;
+        
+        /// <summary>
         /// Header1 control.
         /// </summary>
         /// <remarks>
@@ -47,40 +56,40 @@ namespace Geekees.Common.Controls.Demo {
         protected global::Geekees.Common.Controls.Demo.Header Header1;
         
         /// <summary>
-        /// btnClearConsole control.
+        /// btnThemeMacOS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClearConsole;
+        protected global::System.Web.UI.WebControls.Button btnThemeMacOS;
         
         /// <summary>
-        /// btnIterateNodes control.
+        /// btnThemeVista control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIterateNodes;
+        protected global::System.Web.UI.WebControls.Button btnThemeVista;
         
         /// <summary>
-        /// btnTraverseNodes control.
+        /// btnRightLeft control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTraverseNodes;
+        protected global::System.Web.UI.WebControls.Button btnRightLeft;
         
         /// <summary>
-        /// btnResolveNodesModification control.
+        /// btnThemeDefault control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResolveNodesModification;
+        protected global::System.Web.UI.WebControls.Button btnThemeDefault;
         
         /// <summary>
         /// astvMyTree control.

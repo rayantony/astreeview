@@ -12,12 +12,12 @@ namespace Geekees.Common.Controls.Demo {
     
     
     /// <summary>
-    /// ASTreeViewDemo9 class.
+    /// ASTreeViewDemo11 class.
     /// </summary>
     /// <remarks>
     /// Auto-generated class.
     /// </remarks>
-    public partial class ASTreeViewDemo9 {
+    public partial class ASTreeViewDemo11 {
         
         /// <summary>
         /// Head1 control.
@@ -47,40 +47,31 @@ namespace Geekees.Common.Controls.Demo {
         protected global::Geekees.Common.Controls.Demo.Header Header1;
         
         /// <summary>
-        /// btnClearConsole control.
+        /// aslNodesPerLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClearConsole;
+        protected global::System.Web.UI.WebControls.Literal aslNodesPerLevel;
         
         /// <summary>
-        /// btnIterateNodes control.
+        /// txtNodesPerLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIterateNodes;
+        protected global::System.Web.UI.WebControls.TextBox txtNodesPerLevel;
         
         /// <summary>
-        /// btnTraverseNodes control.
+        /// btnGenerateTree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTraverseNodes;
-        
-        /// <summary>
-        /// btnResolveNodesModification control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResolveNodesModification;
+        protected global::System.Web.UI.WebControls.Button btnGenerateTree;
         
         /// <summary>
         /// astvMyTree control.

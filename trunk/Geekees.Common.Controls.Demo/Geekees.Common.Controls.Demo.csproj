@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Geekees.Common.Controls, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Geekees.Common.Controls, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -51,6 +51,8 @@
   <ItemGroup>
     <Content Include="ASTreeViewDeleteNodeProvider.aspx" />
     <Content Include="ASTreeViewDemo1.aspx" />
+    <Content Include="ASTreeViewDemo10.aspx" />
+    <Content Include="ASTreeViewDemo11.aspx" />
     <Content Include="ASTreeViewDemo2.aspx" />
     <Content Include="ASTreeViewDemo3.aspx" />
     <Content Include="ASTreeViewDemo4.aspx" />
@@ -64,14 +66,15 @@
     <Content Include="db\NorthWind.mdb">
     </Content>
     <Content Include="Header.ascx" />
-    <Content Include="Images\demoIcons\accor.gif" />
-    <Content Include="Images\demoIcons\accorhospitality.gif" />
-    <Content Include="Images\demoIcons\accorservices.gif" />
     <Content Include="Images\demoIcons\amazon.gif" />
+    <Content Include="Images\demoIcons\cadillac.gif" />
+    <Content Include="Images\demoIcons\gm.gif" />
     <Content Include="Images\demoIcons\google.gif" />
+    <Content Include="Images\demoIcons\hummer.gif" />
     <Content Include="Images\demoIcons\microsoft.gif" />
     <Content Include="Images\demoIcons\msdn.gif" />
     <Content Include="Images\demoIcons\picasa.gif" />
+    <Content Include="Images\demoIcons\saab.gif" />
     <Content Include="Javascript\asdropdowntreeview\dropdowntreeview.css" />
     <Content Include="Javascript\asdropdowntreeview\images\windropdown.gif" />
     <Content Include="Javascript\astreeview\astreeview.css" />
@@ -91,6 +94,70 @@
     <Content Include="Javascript\astreeview\images\astreeview-root-line.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-top-line.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-vertical-line.gif" />
+    <Content Include="Javascript\astreeview\themes\default\default.css" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-bottom-line.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-checkbox-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-folder-open.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-folder.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-middle-line.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-minus.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-node.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-plus.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-root-line.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-top-line.gif" />
+    <Content Include="Javascript\astreeview\themes\default\images\astreeview-vertical-line.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-bottom-line.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-checkbox-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-folder-open.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-folder.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-middle-line.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-minus.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-node.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-plus.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-root-line.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-top-line.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\images\astreeview-vertical-line.gif" />
+    <Content Include="Javascript\astreeview\themes\macOS\macOS.css" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-bottom-line.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-checkbox-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-folder-open.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-folder.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-middle-line.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-minus.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-node.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-plus.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-root-line.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-top-line.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\images\astreeview-vertical-line.gif" />
+    <Content Include="Javascript\astreeview\themes\right-left\right-left.css" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-bottom-line.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-checkbox-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-checkbox-half-checked.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-checkbox-unchecked.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-dragDrop-indicator1.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-dragDrop-indicator2.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-folder-open.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-folder.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-middle-line.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-minus.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-node.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-plus.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-root-line.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-top-line.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\images\astreeview-vertical-line.gif" />
+    <Content Include="Javascript\astreeview\themes\vista\vista.css" />
     <Content Include="Javascript\contextmenu\contextmenu.css" />
     <Content Include="Javascript\contextmenu\contextmenu_packed.js" />
     <Content Include="Library\Geekees.Common.Controls.dll" />
@@ -110,6 +177,20 @@
     </Compile>
     <Compile Include="ASTreeViewDemo1.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo10.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo10.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo11.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo11.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo11.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASTreeViewDemo2.aspx.cs">
       <DependentUpon>ASTreeViewDemo2.aspx</DependentUpon>
