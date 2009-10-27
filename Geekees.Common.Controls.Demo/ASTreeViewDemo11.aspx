@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASTreeViewDemo9.aspx.cs" Inherits="Geekees.Common.Controls.Demo.ASTreeViewDemo9" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASTreeViewDemo11.aspx.cs" Inherits="Geekees.Common.Controls.Demo.ASTreeViewDemo11" %>
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc1" %>
 
 <%@ Register Assembly="Geekees.Common.Controls" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
@@ -7,7 +7,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>ASTreeViewDemo9</title>
+    <title>ASTreeViewDemo11</title>
 	<link href="<%=ResolveUrl("~/javascript/astreeview/astreeview.css")%>" type="text/css" rel="stylesheet" />
 	<link href="<%=ResolveUrl("~/javascript/contextmenu/contextmenu.css")%>" type="text/css" rel="stylesheet" />
 	
@@ -18,13 +18,11 @@
     <form id="form1" runat="server">
     
     	<uc1:Header id="Header1" runat="server"></uc1:Header>
-		<h2>Resolve Changes</h2>
+		<h2>Performance Test</h2>
     <div>
-		<asp:Button ID="btnClearConsole" CssClass="button" runat="server" Text="Clear Console" OnClick="btnClearConsole_Click" />
-		<asp:Button ID="btnIterateNodes" CssClass="button" runat="server" Text="Iterate Nodes" OnClick="btnIterateNodes_Click" />
-		<asp:Button ID="btnTraverseNodes" CssClass="button" runat="server" Text="Traverse Nodes" OnClick="btnTraverseNodes_Click" />
-		<asp:Button  ID="btnResolveNodesModification" CssClass="button" runat="server" Text="ResolveNodesModification" OnClick="btnResolveNodesModification_Click" />
-					
+		<asp:Literal ID="aslNodesPerLevel" Text="NodesPerLevel" runat="server"></asp:Literal><asp:TextBox ID="txtNodesPerLevel" runat="server" Text="20"></asp:TextBox>
+		<asp:Button ID="btnGenerateTree" CssClass="button" runat="server" Text="GenerateTree" OnClick="btnGenerateTree_Click" />
+							
     </div>
     <div>
 		<table>
@@ -34,17 +32,16 @@
 						runat="server"
 						BasePath="~/Javascript/astreeview/"
 						DataTableRootNodeValue="0"
-						EnableRoot="false" 
+						EnableRoot="true" 
 						EnableNodeSelection="true" 
-						EnableCheckbox="false" 
+						EnableCheckbox="true" 
 						EnableDragDrop="true" 
-						EnableTreeLines="false"
+						EnableTreeLines="true"
 						EnableNodeIcon="true"
 						EnableCustomizedNodeIcon="false"
-						AutoPostBack="false"
 						EnableDebugMode="false"
-						EnableContextMenu="true"
-						EnableContextMenuAdd="false" />
+						EnableContextMenuAdd="false"
+						EnableParentNodeExpand="true" />
 				</td>
 				<td>
 				

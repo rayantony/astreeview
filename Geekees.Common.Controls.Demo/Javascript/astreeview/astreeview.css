@@ -1,9 +1,9 @@
 
-	.astreeview_tree, .drag-container{
+	.astreeview-tree, .drag-container{
 		margin:0px;
 		padding:0px;
 	}
-	.astreeview_tree ul{	/* Sub menu groups */
+	.astreeview-tree ul{	/* Sub menu groups */
 		margin-left:0px;	/* Left spacing */
 		padding-left:20px;
 		/*display:none;	 Initially hide sub nodes */
@@ -17,7 +17,7 @@
 	}
 	
 	/*
-	.astreeview_tree .line
+	.astreeview-tree .line
 	{
 		background-image:url(images/astreeview-vertical-line.gif);
 		background-position:-8px 0;
@@ -28,43 +28,43 @@
 	}
 	*/
 	
-	.astreeview_tree .line-vertical
+	.astreeview-tree .line-vertical
 	{
 		background:url(images/astreeview-vertical-line.gif) repeat-y 0px 0px;
 	}
 	
-	.astreeview_tree .line-root
+	.astreeview-tree .line-root
 	{
 		background:url(images/astreeview-root-line.gif) white no-repeat;
 		_background:url(images/astreeview-root-line.gif) white no-repeat 0px 3px;
 	}
 		
-	.astreeview_tree .line-top
+	.astreeview-tree .line-top
 	{
 		background:url(images/astreeview-top-line.gif) white no-repeat;
 	}
 	
-	.astreeview_tree .line-middle
+	.astreeview-tree .line-middle
 	{
 		background:url(images/astreeview-middle-line.gif) white no-repeat;
 	}
 	
-	.astreeview_tree .line-bottom
+	.astreeview-tree .line-bottom
 	{
 		background:url(images/astreeview-bottom-line.gif) white no-repeat;
 	}
 	
-	.astreeview_tree .line-none
+	.astreeview-tree .line-none
 	{
 	}
 	
-	.astreeview_tree li, .drag-container li{	/* Nodes */
+	.astreeview-tree li, .drag-container li{	/* Nodes */
 		list-style-type:none;
 		vertical-align:middle;
 		line-height:16px;
 		
 	}
-	.astreeview_tree li a, .drag-container li a{	/* Node links */
+	.astreeview-tree li a, .drag-container li a{	/* Node links */
 		color:#000;
 		text-decoration:none;
 		font-family:arial;
@@ -75,14 +75,14 @@
 		font-size:14px;
 	}
 
-	.astreeview_tree li a:hover, .drag-container li a:hover
+	.astreeview-tree li a:hover, .drag-container li a:hover
 	{
 		border-bottom:1px solid #ccc;
 		/*color:#000;
 		background-color:#e9e9e9;*/
 	}
 	
-	.astreeview_tree img
+	.astreeview-tree img
 	{
 		border:0;
 		padding:0;
@@ -94,27 +94,27 @@
 		/*margin-bottom:2px;*/
 	}
 	
-	.astreeview_tree li a:normal
+	.astreeview-tree li a:normal
 	{
 	}
 	
-	.astreeview_tree li a:hover
+	.astreeview-tree li a:hover
 	{
 		text-decoration:none;
 	}
 	
-	.astreeview_tree li a:visited
+	.astreeview-tree li a:visited
 	{
 		/*border-bottom:0px;*/
 	}
 	
-	.astreeview_tree li a.highlighted-node-item{
+	.astreeview-tree li a.highlighted-node-item{
 		color:#FFF;
 		background-color:#009;
 	}
 	
 	
-	.astreeview_tree input.astreeview-edit-box{	/* Css for the text input - rename item */
+	.astreeview-tree input.astreeview-edit-box{	/* Css for the text input - rename item */
 		font-size:10px;
 		margin:0px;
 		padding:0px;
@@ -123,9 +123,9 @@
 		border-width:1px;
 	}
 	
-	.astreeview_tree li .astreeview-node-selected:link
-	, .astreeview_tree li .astreeview-node-selected:hover
-	, .astreeview_tree li .astreeview-node-selected:visited{
+	.astreeview-tree li .astreeview-node-selected:link
+	, .astreeview-tree li .astreeview-node-selected:hover
+	, .astreeview-tree li .astreeview-node-selected:visited{
 		background-color:#3e32a7;
 		color:white;
 	}

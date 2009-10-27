@@ -24,9 +24,10 @@ namespace Geekees.Common.Controls.Demo
 		private void GenerateTree()
 		{
 			this.astvMyTree.RootNode
-								.AppendChild( new ASTreeViewLinkNode( "Accor", "Accor", "http://www.accor.com", "_self", "Goto Accor", "~/Images/demoIcons/accor.gif" )
-													.AppendChild( new ASTreeViewLinkNode( "Accor Services", "Accor Services", "http://www.accorservices.com", "_self", "Goto Accor Services", "~/Images/demoIcons/accorservices.gif" ) )
-													.AppendChild( new ASTreeViewLinkNode( "Accor Hospitality", "Accor Hospitality", "http://www.accorhotels.com", "_self", "Goto Accor Hospitality", "~/Images/demoIcons/accorhospitality.gif" ) )
+								.AppendChild( new ASTreeViewLinkNode( "GM", "GM", "http://www.gm.com", "_self", "Goto GM.com", "~/Images/demoIcons/gm.gif" )
+													.AppendChild( new ASTreeViewLinkNode( "Hummer", "Hummer", "http://www.hummer.com", "_self", "Goto Hummer.com", "~/Images/demoIcons/hummer.gif" ) )
+													.AppendChild( new ASTreeViewLinkNode( "Cadillac", "Cadillac", "http://www.cadillac.com", "_self", "Goto Cadillac.com", "~/Images/demoIcons/cadillac.gif" ) )
+													.AppendChild( new ASTreeViewLinkNode( "SAAB", "SAAB", "http://www.saab.com", "_self", "Goto SAAB.com", "~/Images/demoIcons/saab.gif" ) )
 								)
 								.AppendChild( new ASTreeViewLinkNode( "Google", "Google", "http://www.google.com", "_self", "Goto Google", "~/Images/demoIcons/google.gif" )
 													.AppendChild( new ASTreeViewLinkNode( "Picasa", "Picasa", "http://picasaweb.google.com", "_self", "Goto Picasa", "~/Images/demoIcons/picasa.gif" ) )
