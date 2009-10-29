@@ -2,6 +2,8 @@
 	.astreeview-tree, .drag-container{
 		margin:0px;
 		padding:0px;
+		
+		z-index:1000;
 	}
 	.astreeview-tree ul{	/* Sub menu groups */
 		margin-left:0px;	/* Left spacing */
@@ -151,6 +153,7 @@
 		-moz-border-radius-topright:4px;
 		border-radius:4px;
 		-webkit-border-radius:4px;
+		
 	}
 	
 	.astreeview-loading-placeholder
