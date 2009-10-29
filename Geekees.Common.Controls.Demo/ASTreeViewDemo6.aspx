@@ -37,7 +37,7 @@
 						EnableRoot="false" 
 						EnableNodeSelection="false" 
 						EnableCheckbox="true" 
-						EnableDragDrop="false" 
+						EnableDragDrop="true" 
 						EnableTreeLines="true"
 						EnableNodeIcon="true"
 						EnableCustomizedNodeIcon="false"
@@ -70,7 +70,15 @@
 							EnableCloseOnOutsideClick="true" 
 							EnableHalfCheckedAsChecked="true"
 							RequiredValidatorValidationGroup="vgSelect" 
-							EnableContextMenuAdd="false" />
+							EnableContextMenuAdd="false"
+							EnableContextMenuDelete="false"
+							EnableAjaxOnEditDelete="true"
+							AddNodeProvider="~/ASTreeViewDemo6.aspx"
+							AdditionalAddRequestParameters="{'t2':'ajaxAdd'}"
+							EditNodeProvider="~/ASTreeViewRenameNodeHandler.aspx"
+							DeleteNodeProvider="~/ASTreeViewDeleteNodeProvider.aspx"
+							LoadNodesProvider="~/ASTreeViewDemo6.aspx"
+							AdditionalLoadNodesRequestParameters="{'t1':'ajaxLoad'}" />
 				</td>
 				<td>
 				
