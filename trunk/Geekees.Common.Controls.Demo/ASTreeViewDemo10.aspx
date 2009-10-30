@@ -45,7 +45,8 @@
 						EnableCustomizedNodeIcon="false"
 						EnableDebugMode="false"
 						EnableContextMenuAdd="false"
-						EnableParentNodeExpand="true" />
+						EnableParentNodeExpand="true"
+						EnableTheme="true" />
 				</td>
 				<td>
 				
