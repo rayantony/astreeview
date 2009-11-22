@@ -150,8 +150,8 @@ thisObj=_rdc.a3.findRealTarget(thisObj);if(document.all)e=event;dragDrop_x=this.
 {if(_rdc.a3.a4)
 window.event.cancelBubble=true;else if(e)
 e.stopPropagation();return;}
-this.b12=true;var tmpVar=thisObj.getAttribute('enable-siblings');if(tmpVar&&tmpVar=='false')
-this.b12=false;if(thisObj&&thisObj.id&&thisObj.tagName=="LI")
+this.b12=false;var tmpVar=thisObj.getAttribute('enable-siblings');if(tmpVar&&tmpVar=='false')
+this.b12=true;if(thisObj&&thisObj.id&&thisObj.tagName=="LI")
 {this.b17=thisObj;var tmpObj=this.b20;tmpObj.style.display='block';var eventSourceObj=evt.target||evt.srcElement;if(eventSourceObj.getAttribute("isTreeNodeChild"))
 eventSourceObj=_rdc.a3.findRealTarget(eventSourceObj);if(this.b12&&eventSourceObj.tagName=='IMG')eventSourceObj=eventSourceObj.nextSibling;var tmpImg=tmpObj.getElementsByTagName('IMG')[0];if(eventSourceObj.tagName=='A'||this.b12){tmpImg.src=this.dragDropIndicatorSub;this.b21=true;tmpObj.style.left=(this.c6(eventSourceObj)+this.b22)+'px';}else{tmpImg.src=this.dragDropIndicator;this.b21=false;tmpObj.style.left=(this.c6(eventSourceObj)+this.b23)+'px';}
 tmpObj.style.top=(this.c5(thisObj)+this.b24)+'px';}
