@@ -119,6 +119,7 @@ namespace Geekees.Common.Controls.Demo
 			ASTreeViewLinkNode n = new ASTreeViewLinkNode( "Picasa", "Picasa", "http://picasaweb.google.com", "_self", "Goto Picasa", "~/Images/demoIcons/picasa.gif" );
 			n.NodeText = "The node cannot have children.";
 			n.EnableChildren = false;
+			n.EnableEditContextMenu = false;
 			//n.AddtionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "alert(1);return false;" ) );
 			//n.AddtionalAttributes.Add( new KeyValuePair<string, string>( "disableChildren1", "true" ) );
 
