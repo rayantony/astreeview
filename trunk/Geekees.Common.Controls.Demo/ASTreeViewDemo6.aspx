@@ -43,7 +43,7 @@
 						EnableCustomizedNodeIcon="false"
 						EnableDebugMode="false"
 						EnableRequiredValidator="false"
-						InitialDropdownText="Please check" 
+						InitialDropdownText="<span style='color:green;'>Please check</span>" 
 						Width="300"
 						EnableCloseOnOutsideClick="true" 
 						EnableHalfCheckedAsChecked="true" 

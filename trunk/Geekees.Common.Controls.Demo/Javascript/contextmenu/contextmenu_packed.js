@@ -40,14 +40,15 @@ _rdc.ASContextMenuHelper.mouseY=function(e){var posy=0;if(!e)var e=window.event;
 else if(e.clientY){posy=e.clientY+document.body.scrollTop
 +document.documentElement.scrollTop;}
 return posy;}
-_rdc.ASContextMenu=function(){this.a11=new Array();this.a10=null;this.a9=null;this.a12=true;this.a13=true;this.a15=null;this.a16=new _rdc.IE6SelectHelper();this.a3=_rdc.ASContextMenuHelper.BindAsEventListener(this,this.a4);this.a5=_rdc.ASContextMenuHelper.BindAsEventListener(this,this.a6);}
+_rdc.ASContextMenu=function(){this.a11=new Array();this.a10=null;this.a9=null;this.a12=true;this.a13=true;this.a15=null;this.a16=new _rdc.IE6SelectHelper();this.a3=_rdc.ASContextMenuHelper.BindAsEventListener(this,this.a4);this.a5=_rdc.ASContextMenuHelper.BindAsEventListener(this,this.a6);this._cNames=null;}
 _rdc.ASContextMenu.IsContextMenuShowed={};_rdc.ASContextMenu.prototype={setup:function(conf){if(document.all&&document.getElementById&&!window.opera){this.IE=true;}
 if(!document.all&&document.getElementById&&!window.opera){this.FF=true;}
 if(navigator.appName.indexOf("Opera")!=-1){this.OP=true;}
 if(this.IE||this.FF){_rdc.ASContextMenuHelper.addEvent(document,"contextmenu",this.a3);_rdc.ASContextMenuHelper.addEvent(document,"click",this.a5);if(conf&&typeof(conf.preventDefault)!="undefined"){this.a12=conf.preventDefault;}
 if(conf&&typeof(conf.preventForms)!="undefined"){this.a13=conf.preventForms;}}
 else if(this.OP){_rdc.ASContextMenuHelper.addEvent(document,"mousedown",this.a3);_rdc.ASContextMenuHelper.addEvent(document,"mousedown",this.a5);}},getSelectedItem:function(){return this.a15;},attachContextMenu:function(classNames,menuId){if(typeof(classNames)=="string"){this.a11[classNames]=menuId;}
-if(typeof(classNames)=="object"){for(x=0;x<classNames.length;x++){this.a11[classNames[x]]=menuId;}}},a1:function(e){if(this.IE){this.a10=event.srcElement;}else{this.a10=e.target;}
+if(typeof(classNames)=="object"){for(x=0;x<classNames.length;x++){this.a11[classNames[x]]=menuId;}}
+this._cNames=classNames;},a1:function(e){if(this.IE){this.a10=event.srcElement;}else{this.a10=e.target;}
 while(this.a10!=null){var className=this.a10.className;if(typeof(className)!="undefined"){className=className.replace(/^\s+/g,"").replace(/\s+$/g,"")
 var classArray=className.split(/[ ]+/g);for(i=0;i<classArray.length;i++){if(this.a11[classArray[i]]){return this.a11[classArray[i]];}}}
 if(this.IE){this.a10=this.a10.parentElement;}else{this.a10=this.a10.parentNode;}}
@@ -58,9 +59,13 @@ if(isContextMenuShowed)
 return false;var returnValue=true;var evt=this.IE?window.event:e;if(evt.button!=1){if(evt.target){var el=evt.target;}else if(evt.srcElement){var el=evt.srcElement;}
 var tname=el.tagName.toLowerCase();if((tname=="input"||tname=="textarea")){if(!this.a13){returnValue=true;}else{returnValue=false;}}else{if(!this.a12){returnValue=true;}else{returnValue=false;}}}
 return returnValue;},getMenuA:function(li){var menuAs=li.getElementsByTagName("A");if(menuAs.length==0)
-return null;return menuAs[0];},a4:function(e){e=e||window.event;if(this.OP){if(!e.ctrlKey)
+return null;return menuAs[0];},_findRealTarget:function(el){var p=el.parentNode;while(p){if(p&&p.className&&p.className.indexOf(this._cNames)>=0)
+return p;p=p.parentNode;}
+return null;},a4:function(e){e=e||window.event;if(this.OP){if(!e.ctrlKey)
 return;}
-var elem=e.srcElement||e.target;var menuElementId=this.a1(e);if(menuElementId){this.a9=document.getElementById(menuElementId);this.a9.style.display='block';this._setElementByMousePosition(e,this.a9);this.a15=elem;this.a16.hideSelect(menuElementId);if(!_rdc.ASContextMenuHelper.isIE){e.preventDefault();}
+var elem=e.srcElement||e.target;if(elem&&elem.className.indexOf(this._cNames)<0){elem=this._findRealTarget(elem);}
+if(!elem)
+return;var menuElementId=this.a1(e);if(menuElementId){this.a9=document.getElementById(menuElementId);this.a9.style.display='block';this._setElementByMousePosition(e,this.a9);this.a15=elem;this.a16.hideSelect(menuElementId);if(!_rdc.ASContextMenuHelper.isIE){e.preventDefault();}
 for(var i=0;i<this.a9.childNodes.length;i++){var curMenuItem=this.a9.childNodes[i];if(curMenuItem.tagName=="LI"){curMenuItem.style.display="";var menuA=this.getMenuA(curMenuItem);if(menuA){var cmdName=menuA.getAttribute("cmdName");if(cmdName){if(elem.getAttribute("disable"+cmdName))
 curMenuItem.style.display="none";}}}}
 _rdc.ASContextMenu.IsContextMenuShowed["contextmenumark"+menuElementId]=true;return false;}
