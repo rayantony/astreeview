@@ -21,8 +21,9 @@ namespace Geekees.Common.Controls.Demo
 {
 	public partial class ASTreeViewDemo9 : PageBase
 	{
-
+		#region declaration
 		private static string ORIGINAL_TREE_NODES_SESSION_KEY = "ORIGINAL_TREE_NODES_SESSION_KEY";
+
 		public Hashtable OriginalTreeNodes
 		{
 			get
@@ -36,10 +37,57 @@ namespace Geekees.Common.Controls.Demo
 			}
 		}
 
+
+		#endregion
+
+		#region properties
+
+		#endregion
+
+		#region overrided methods
+		/// <summary>
+		/// OnInit
+		/// </summary>
+		/// <param name="e"></param>
+		protected override void OnInit( EventArgs e )
+		{
+			InitializeComponent();
+			base.OnInit( e );
+		}
+		#endregion
+
+		#region event handlers (Page_Load etc...)
+
+		/// <summary>
+		/// Page load logic
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load( object sender, EventArgs e )
 		{
 			if( !IsPostBack )
+			{
 				GenerateTree();
+			}
+		}
+
+		#endregion
+
+		#region public methods
+
+		#endregion
+
+		#region protected methods
+
+		#endregion
+
+		#region private methods
+
+		/// <summary>
+		/// initial controls, bind you events etc. here
+		/// </summary>
+		private void InitializeComponent()
+		{
 		}
 
 		private void GenerateTree()
@@ -60,10 +108,12 @@ namespace Geekees.Common.Controls.Demo
 
 			SaveOriginalTreeNodes();
 		}
+		#endregion
 
 		protected override void OnPreRender( EventArgs e )
 		{
 			base.OnPreRender( e );
+
 		}
 
 		#region Nodes Iteration
@@ -175,6 +225,11 @@ namespace Geekees.Common.Controls.Demo
 					if( node.ParentNode.NodeValue != originalNode.ParentNode.NodeValue )
 						sb.Append( string.Format( "[PARENT CHANGED]Node's parent changed! Original Parent: {0}, New Parent: {1} <br />", originalNode.ParentNode.NodeText, node.ParentNode.NodeText ) );
 
+					int oldPos = originalNode.ParentNode.IndexOf( originalNode );
+					int newPos = node.ParentNode.ChildNodes.IndexOf( node );
+					if( newPos != oldPos )
+						sb.Append( string.Format( "[POSITION CHANGED]Node's position changed! Original Position: {0}, New Position: {1} <br />", oldPos, newPos ) );
+
 				}
 			};
 
@@ -182,7 +237,6 @@ namespace Geekees.Common.Controls.Demo
 			astvMyTree.TraverseTreeNode( this.astvMyTree.RootNode, nodeDelegate );
 
 			#endregion
-
 
 			#region find deleted nodes
 
@@ -214,6 +268,8 @@ namespace Geekees.Common.Controls.Demo
 
 			#endregion
 
+
+
 			this.divConsole.InnerHtml += ( string.Format( ">>The following nodes have been changed: <div style='padding-left:20px;'>{0}</div>", sb.ToString() ) );
 
 
@@ -225,6 +281,5 @@ namespace Geekees.Common.Controls.Demo
 		{
 			this.divConsole.InnerHtml = string.Empty;
 		}
-
 	}
 }

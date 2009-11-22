@@ -31,23 +31,29 @@
 		<asp:Button ID="btnToggleExpandCollapseAllClient" CssClass="button" runat="server" Text="ToggleExpandCollapseAllClient" />
 		<asp:Button ID="btnToggleContextMenu" CssClass="button" runat="server" Text="EnableContextMenu" OnClick="btnToggleContextMenu_Click"  />
 		<asp:Button ID="btnGetTreeViewXML" CssClass="button" runat="server" Text="GetTreeViewXML" OnClick="btnGetTreeViewXML_Click" />
+		<asp:Button ID="btnToggleMultiLineEdit" CssClass="button" runat="server" Text="EnableMultiLineEdit" OnClick="btnToggleMultiLineEdit_Click" />
+		<asp:Button ID="btnToggleEscapeInput" CssClass="button" runat="server" Text="EnableEscapeInput" OnClick="btnToggleEscapeInput_Click" />
+
     </div>
     
     <div>
 		<ct:ASTreeView ID="astvMyTree" 
-				runat="server"
-				BasePath="~/Javascript/astreeview/"
-				DataTableRootNodeValue="0"
-				EnableRoot="false" 
-				EnableNodeSelection="false" 
-				EnableCheckbox="true" 
-				EnableDragDrop="true" 
-				EnableTreeLines="true"
-				EnableNodeIcon="true"
-				EnableCustomizedNodeIcon="true"
-				EnableContextMenu="true"
-				EnableDebugMode="false"
-				EnableContextMenuAdd="false" />
+			runat="server"
+			BasePath="~/Javascript/astreeview/"
+			DataTableRootNodeValue="0"
+			EnableRoot="false" 
+			EnableNodeSelection="false" 
+			EnableCheckbox="true" 
+			EnableDragDrop="true" 
+			EnableTreeLines="true"
+			EnableNodeIcon="true"
+			EnableCustomizedNodeIcon="true"
+			EnableContextMenu="true"
+			EnableDebugMode="false"
+			EnableContextMenuAdd="false"
+			OnNodeDragAndDropCompleteScript="dndHandler( elem )"
+			EnableMultiLineEdit="false"
+			EnableEscapeInput="false" />
     </div>
     
     <div id="divConsole" runat="server"></div>
