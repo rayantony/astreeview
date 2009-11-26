@@ -264,7 +264,7 @@
     <Compile Include="ASTreeViewRenameNodeHandler.aspx.designer.cs">
       <DependentUpon>ASTreeViewRenameNodeHandler.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DemoSeverControl.cs" />
+    <Compile Include="DemoServerControl.cs" />
     <Compile Include="Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

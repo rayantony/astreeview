@@ -20,8 +20,8 @@ using Geekees.Common.Utilities;
 
 namespace Geekees.Common.Controls.Demo
 {
-	[ToolboxData( "<{0}:DemoSeverControl runat=server></{0}:DemoSeverControl>" )]
-	public class DemoSeverControl : WebControl, INamingContainer
+	[ToolboxData( "<{0}:DemoServerControl runat=server></{0}:DemoServerControl>" )]
+	public class DemoServerControl : WebControl, INamingContainer
 	{
 
 		#region properties
@@ -48,7 +48,7 @@ namespace Geekees.Common.Controls.Demo
 
 		#region constructor
 
-		public DemoSeverControl()
+		public DemoServerControl()
 		{
 			this.astvMyTree = new ASTreeView();
 		}

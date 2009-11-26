@@ -44,6 +44,6 @@ namespace Geekees.Common.Controls.Demo {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Geekees.Common.Controls.Demo.DemoSeverControl dscDemoServerControl;
+        protected global::Geekees.Common.Controls.Demo.DemoServerControl dscDemoServerControl;
     }
 }

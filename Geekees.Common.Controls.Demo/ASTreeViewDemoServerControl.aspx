@@ -21,7 +21,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-		<ct:DemoSeverControl ID="dscDemoServerControl" runat="server" />
+		<ct:DemoServerControl ID="dscDemoServerControl" runat="server" />
     </div>
     </form>
 </body>
