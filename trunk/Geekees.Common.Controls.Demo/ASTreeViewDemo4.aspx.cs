@@ -40,7 +40,6 @@ namespace Geekees.Common.Controls.Demo
 			this.astvMyTree.DataSourceDescriptor = descripter;
 			this.astvMyTree.DataSource = doc;
 			this.astvMyTree.DataBind();
-
 		}
 
 		protected void btnGetTreeViewXML_Click( object sender, EventArgs e )
