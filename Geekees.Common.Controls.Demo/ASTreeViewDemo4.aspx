@@ -33,13 +33,14 @@
 						EnableRoot="false" 
 						EnableNodeSelection="true" 
 						EnableCheckbox="false" 
-						EnableDragDrop="false" 
+						EnableDragDrop="true" 
 						EnableTreeLines="true"
 						EnableNodeIcon="true"
 						EnableCustomizedNodeIcon="false"
 						EnableDebugMode="false"
 						EnableContextMenuAdd="false"
-						EnableParentNodeExpand="true" />
+						EnableParentNodeExpand="true"
+						EnableManageIconAfterDragDrop="false" />
 					
 				</td>
 				<td>

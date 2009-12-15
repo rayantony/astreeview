@@ -71,8 +71,8 @@ WHERE p1.[ParentID] " + para;
 				node.IsVirtualNode = childNodesCount > 0;
 				node.NavigateUrl = "#";
 				//List<KeyValuePair<string, string>> attrs = new List<KeyValuePair<string, string>>();
-				node.AddtionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
-				//node.AddtionalAttributes = attrs;
+				node.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
+				//node.AdditionalAttributes = attrs;
 
 				root.AppendChild( node );
 			}
@@ -119,7 +119,7 @@ WHERE p1.[ParentID] " + para;
 					node.VirtualParentKey = productId;
 					node.IsVirtualNode = childNodesCount > 0;
 					node.NavigateUrl = "#";
-					node.AddtionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
+					node.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
 
 					root.AppendChild( node );
 				}
@@ -149,7 +149,7 @@ WHERE p1.[ParentID] " + para;
 
 				ASTreeViewLinkNode node = new ASTreeViewLinkNode( addNodeText, newId.ToString() );
 				node.NavigateUrl = "#";
-				node.AddtionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
+				node.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
 
 				root.AppendChild( node );
 

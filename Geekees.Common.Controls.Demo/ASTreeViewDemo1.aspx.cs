@@ -120,8 +120,8 @@ namespace Geekees.Common.Controls.Demo
 			n.NodeText = "The node cannot have children.";
 			n.EnableChildren = false;
 			n.EnableEditContextMenu = false;
-			//n.AddtionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "alert(1);return false;" ) );
-			//n.AddtionalAttributes.Add( new KeyValuePair<string, string>( "disableChildren1", "true" ) );
+			//n.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "alert(1);return false;" ) );
+			//n.AdditionalAttributes.Add( new KeyValuePair<string, string>( "disableChildren1", "true" ) );
 
 			this.astvMyTree.RootNode
 				//.AppendChild( new ASTreeViewLinkNode( "Accor", "Accor", "http://www.accor.com", "_self", "Goto Accor", "~/Images/demoIcons/accor.gif" )
