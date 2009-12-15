@@ -39,8 +39,7 @@
 						EnableCustomizedNodeIcon="false"
 						EnableDebugMode="false"
 						EnableContextMenuAdd="false"
-						EnableParentNodeExpand="true"
-						EnableManageIconAfterDragDrop="false" />
+						EnableParentNodeExpand="true" />
 					
 				</td>
 				<td>
