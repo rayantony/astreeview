@@ -84,7 +84,7 @@ namespace Geekees.Common.Controls.Demo
 
 				ASTreeViewLinkNode node = new ASTreeViewLinkNode( addNodeText, newId.ToString() );
 				node.NavigateUrl = "#";
-				node.AddtionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
+				node.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
 
 				root.AppendChild( node );
 
