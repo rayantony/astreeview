@@ -3,29 +3,41 @@ using System;
 using System.Data;
 using System.Configuration;
 using System.Collections;
+using System.Collections.Generic;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using System.Xml;
+
 
 using Geekees.Common.Controls;
 using Geekees.Common.Utilities;
 using Geekees.Common.Utilities.Xml;
-
+using System.Text;
+using System.Xml;
 #endregion
 
 namespace Geekees.Common.Controls.Demo
 {
-	public partial class ASTreeViewDemo4 : PageBase
+	public partial class ASTreeViewDemo12 : System.Web.UI.Page
 	{
 		#region declaration
 
 		#endregion
 
 		#region properties
+
+
+		public string TraverseNodeScript
+		{
+			get
+			{
+				return this.astvMyTree.GetClientTreeObjectId() + ".traverseTreeNode( displayNodeFunc );";
+			}
+		}
+
 
 		#endregion
 

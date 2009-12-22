@@ -104,7 +104,6 @@ namespace Geekees.Common.Controls.Demo
 		/// </summary>
 		private void InitializeComponent()
 		{
-
 			this.btnExpandAllClient.Attributes.Add( "onclick", this.astvMyTree.GetExpandAllScript() + "return false;" );
 			this.btnCollapseAllClient.Attributes.Add( "onclick", this.astvMyTree.GetCollapseAllScript() + "return false;" );
 			this.btnToggleExpandCollapseAllClient.Attributes.Add( "onclick", this.astvMyTree.GetToggleExpandCollapseAllScript() + "return false;" );
@@ -116,31 +115,32 @@ namespace Geekees.Common.Controls.Demo
 		private void GenerateTree()
 		{
 
-			ASTreeViewLinkNode n = new ASTreeViewLinkNode( "Picasa", "Picasa", "http://picasaweb.google.com", "_self", "Goto Picasa", "~/Images/demoIcons/picasa.gif" );
+			ASTreeViewLinkNode n = new ASTreeViewLinkNode( "Picasa", "Picasa", "http://picasaweb.google.com", "frm", "Goto Picasa", "~/Images/demoIcons/picasa.gif" );
 			n.NodeText = "The node cannot have children.";
 			n.EnableChildren = false;
 			n.EnableEditContextMenu = false;
+
 			//n.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "alert(1);return false;" ) );
 			//n.AdditionalAttributes.Add( new KeyValuePair<string, string>( "disableChildren1", "true" ) );
 
 			this.astvMyTree.RootNode
-				//.AppendChild( new ASTreeViewLinkNode( "Accor", "Accor", "http://www.accor.com", "_self", "Goto Accor", "~/Images/demoIcons/accor.gif" )
-				//                    .AppendChild( new ASTreeViewLinkNode( "Accor Services", "Accor Services", "http://www.accorservices.com", "_self", "Goto Accor Services", "~/Images/demoIcons/accorservices.gif" ) )
-				//                    .AppendChild( new ASTreeViewLinkNode( "Accor Hospitality", "Accor Hospitality", "http://www.accorhotels.com", "_self", "Goto Accor Hospitality", "~/Images/demoIcons/accorhospitality.gif" ) )
+				//.AppendChild( new ASTreeViewLinkNode( "Accor", "Accor", "http://www.accor.com", "frm", "Goto Accor", "~/Images/demoIcons/accor.gif" )
+				//                    .AppendChild( new ASTreeViewLinkNode( "Accor Services", "Accor Services", "http://www.accorservices.com", "frm", "Goto Accor Services", "~/Images/demoIcons/accorservices.gif" ) )
+				//                    .AppendChild( new ASTreeViewLinkNode( "Accor Hospitality", "Accor Hospitality", "http://www.accorhotels.com", "frm", "Goto Accor Hospitality", "~/Images/demoIcons/accorhospitality.gif" ) )
 				//)
-								.AppendChild( new ASTreeViewLinkNode( "GM", "GM", "http://www.gm.com", "_self", "Goto GM.com", "~/Images/demoIcons/gm.gif" )
-													.AppendChild( new ASTreeViewLinkNode( "Hummer", "Hummer", "http://www.hummer.com", "_self", "Goto Hummer.com", "~/Images/demoIcons/hummer.gif" ) )
-													.AppendChild( new ASTreeViewLinkNode( "Cadillac", "Cadillac", "http://www.cadillac.com", "_self", "Goto Cadillac.com", "~/Images/demoIcons/cadillac.gif" ) )
-													.AppendChild( new ASTreeViewLinkNode( "SAAB", "SAAB", "http://www.saab.com", "_self", "Goto SAAB.com", "~/Images/demoIcons/saab.gif" ) )
+								.AppendChild( new ASTreeViewLinkNode( "GM", "GM", "http://www.gm.com", "frm", "Goto GM.com", "~/Images/demoIcons/gm.gif" )
+													.AppendChild( new ASTreeViewLinkNode( "Hummer", "Hummer", "http://www.hummer.com", "frm", "Goto Hummer.com", "~/Images/demoIcons/hummer.gif" ) )
+													.AppendChild( new ASTreeViewLinkNode( "Cadillac", "Cadillac", "http://www.cadillac.com", "frm", "Goto Cadillac.com", "~/Images/demoIcons/cadillac.gif" ) )
+													.AppendChild( new ASTreeViewLinkNode( "SAAB", "SAAB", "http://www.saab.com", "frm", "Goto SAAB.com", "~/Images/demoIcons/saab.gif" ) )
 								)
-								.AppendChild( new ASTreeViewLinkNode( "Google", "Google Site", "http://www.google.com", "_self", "Goto Google", "~/Images/demoIcons/google.gif" )
-													.AppendChild( new ASTreeViewLinkNode( "Picasa", "Picasa", "http://picasaweb.google.com", "_self", "Goto Picasa", "~/Images/demoIcons/picasa.gif" ) )
+								.AppendChild( new ASTreeViewLinkNode( "Google", "Google Site", "http://www.google.com", "frm", "Goto Google", "~/Images/demoIcons/google.gif" )
+													.AppendChild( new ASTreeViewLinkNode( "Picasa", "Picasa", "http://picasaweb.google.com", "frm", "Goto Picasa", "~/Images/demoIcons/picasa.gif" ) )
 								)
-								.AppendChild( new ASTreeViewLinkNode( "Microsoft", "Microsoft", "http://www.microsoft.com", "_self", "Goto Microsoft", "~/Images/demoIcons/microsoft.gif" )
-													.AppendChild( new ASTreeViewLinkNode( "MSDN", "MSDN", "http://www.msdn.com", "_self", "Goto MSDN", "~/Images/demoIcons/msdn.gif" ) )
+								.AppendChild( new ASTreeViewLinkNode( "Microsoft", "Microsoft", "http://www.microsoft.com", "frm", "Goto Microsoft", "~/Images/demoIcons/microsoft.gif" )
+													.AppendChild( new ASTreeViewLinkNode( "MSDN", "MSDN", "http://www.msdn.com", "frm", "Goto MSDN", "~/Images/demoIcons/msdn.gif" ) )
 								)
-								.AppendChild( new ASTreeViewLinkNode( "Amazon", "Amazon", "http://www.amazon.com", "_self", "Goto Amazon", "~/Images/demoIcons/amazon.gif" ).AppendChild( n ) )
-								.AppendChild( new ASTreeViewLinkNode( "<font style='color:blue;font-weight:bold;font-style:italic;' isTreeNodeChild='true'>ASTreeView</font>", "Best Free TreeView Control for ASP.Net", "http://www.astreeview.com", "_self", "Html as TreeNode Text", "~/Images/demoIcons/ast.gif" )
+								.AppendChild( new ASTreeViewLinkNode( "Amazon", "Amazon", "http://www.amazon.com", "frm", "Goto Amazon", "~/Images/demoIcons/amazon.gif" ).AppendChild( n ) )
+								.AppendChild( new ASTreeViewLinkNode( "<font style='color:blue;font-weight:bold;font-style:italic;' isTreeNodeChild='true'>ASTreeView</font>", "Best Free TreeView Control for ASP.Net", "http://www.astreeview.com", "frm", "Html as TreeNode Text", "~/Images/demoIcons/ast.gif" )
 								);
 
 

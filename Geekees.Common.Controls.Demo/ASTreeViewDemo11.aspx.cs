@@ -127,7 +127,7 @@ namespace Geekees.Common.Controls.Demo
 		private void GenerateTree()
 		{
 			XmlDocument doc = new XmlDocument();
-			doc.Load( Server.MapPath( "~/ASTreeViewDemo/ASTreeViewDemo4_Sample_Data.xml" ) );
+			doc.Load( Server.MapPath( "~/ASTreeViewDemo4_Sample_Data.xml" ) );
 
 			ASTreeViewXMLDescriptor descripter = new ASTreeViewXMLDescriptor();
 

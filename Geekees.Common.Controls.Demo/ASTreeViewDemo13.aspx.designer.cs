@@ -12,21 +12,12 @@ namespace Geekees.Common.Controls.Demo {
     
     
     /// <summary>
-    /// ASTreeViewDemo3 class.
+    /// ASTreeViewDemo13 class.
     /// </summary>
     /// <remarks>
     /// Auto-generated class.
     /// </remarks>
-    public partial class ASTreeViewDemo3 {
-        
-        /// <summary>
-        /// Head1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+    public partial class ASTreeViewDemo13 {
         
         /// <summary>
         /// form1 control.
@@ -47,30 +38,12 @@ namespace Geekees.Common.Controls.Demo {
         protected global::Geekees.Common.Controls.Demo.Header Header1;
         
         /// <summary>
-        /// btnToggleAjaxOnEdit control.
+        /// dscDemoServerControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleAjaxOnEdit;
-        
-        /// <summary>
-        /// astvMyTree control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Geekees.Common.Controls.ASTreeView astvMyTree;
-        
-        /// <summary>
-        /// divConsole control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConsole;
+        protected global::Geekees.Common.Controls.Demo.DemoServerControl dscDemoServerControl;
     }
 }

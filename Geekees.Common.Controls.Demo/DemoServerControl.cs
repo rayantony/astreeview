@@ -20,9 +20,43 @@ using Geekees.Common.Utilities;
 
 namespace Geekees.Common.Controls.Demo
 {
+
 	[ToolboxData( "<{0}:DemoServerControl runat=server></{0}:DemoServerControl>" )]
 	public class DemoServerControl : WebControl, INamingContainer
 	{
+
+		#region event
+
+		#region OnSelectedNodeChanged
+
+		private DemoServerControlNodeSelectedEventHandler _onSelectedNodeChanged;
+
+		/// <summary>
+		/// Occurs when [on selected node changed].
+		/// </summary>
+		public event DemoServerControlNodeSelectedEventHandler OnSelectedNodeChanged
+		{
+			add { _onSelectedNodeChanged += value; }
+			remove { _onSelectedNodeChanged -= value; }
+		}
+
+		/// <summary>
+		/// Fires the node selected event.
+		/// </summary>
+		protected virtual void FireNodeSelectedEvent()
+		{
+			if( _onSelectedNodeChanged != null )
+			{
+				string nodeText = HttpUtility.UrlDecode( this.hfSelectedNodeText.Value );
+				string nodeValue = this.hfSelectedNodeValue.Value;
+
+				_onSelectedNodeChanged( this, new DemoServerControlNodeSelectedEventArgs( nodeText, nodeValue ) );
+			}
+		}
+
+		#endregion
+
+		#endregion
 
 		#region properties
 
@@ -43,6 +77,10 @@ namespace Geekees.Common.Controls.Demo
 		#region declaration
 
 		protected ASTreeView astvMyTree;
+		protected HiddenField hfSelectedNodeText;
+		protected HiddenField hfSelectedNodeValue;
+		protected Button btnPostBackTrigger;
+
 
 		#endregion
 
@@ -51,6 +89,9 @@ namespace Geekees.Common.Controls.Demo
 		public DemoServerControl()
 		{
 			this.astvMyTree = new ASTreeView();
+			this.hfSelectedNodeText = new HiddenField();
+			this.hfSelectedNodeValue = new HiddenField();
+			this.btnPostBackTrigger = new Button();
 		}
 
 		#endregion
@@ -69,6 +110,9 @@ namespace Geekees.Common.Controls.Demo
 			base.CreateChildControls();
 
 			this.Controls.Add( this.astvMyTree );
+			this.Controls.Add( this.hfSelectedNodeText );
+			this.Controls.Add( this.hfSelectedNodeValue );
+			this.Controls.Add( this.btnPostBackTrigger );
 		}
 
 		protected override void OnLoad( EventArgs e )
@@ -86,6 +130,8 @@ namespace Geekees.Common.Controls.Demo
 		{
 			if( this.Page.Request.QueryString["t1"] == "ajaxLoad" )
 			{
+				#region ajaxLoad
+
 				string virtualParentKey = this.Page.Request.QueryString["virtualParentKey"];
 
 				string para = string.Empty;// "= 1";
@@ -139,9 +185,13 @@ WHERE p1.[ParentID] " + para;
 
 				writer.Write( astvMyTree.AjaxResponseEndTag );
 
+				#endregion
+
 			}
 			else if( this.Page.Request.QueryString["t2"] == "ajaxAdd" )
 			{
+				#region ajaxAdd
+
 				string addNodeText = this.Page.Request.QueryString["addNodeText"];
 				int parentNodeValue = int.Parse( this.Page.Request.QueryString["parentNodeValue"] );
 
@@ -171,9 +221,32 @@ WHERE p1.[ParentID] " + para;
 					c.RenderControl( writer );
 
 				writer.Write( astvMyTree.AjaxResponseEndTag );
+
+				#endregion
 			}
 			else
+			{
 				base.Render( writer );
+
+				#region render click script
+
+				string clickScript = string.Format( @"
+<script type='text/javascript'>
+function nodeSelectHandler{0}(elem){{
+	document.getElementById('{1}').value = encodeURIComponent(elem.innerHTML);
+	document.getElementById('{2}').value = elem.parentNode.getAttribute(""treeNodeValue"");
+	document.getElementById('{3}').click();
+}}
+</script>"
+					, this.ClientID /*0*/
+					, this.hfSelectedNodeText.ClientID /*1*/
+					, this.hfSelectedNodeValue.ClientID /*2*/
+					, this.btnPostBackTrigger.ClientID /*3*/);
+
+				writer.Write( clickScript );
+
+				#endregion
+			}
 
 		}
 
@@ -183,7 +256,10 @@ WHERE p1.[ParentID] " + para;
 
 		private void InitializeControls()
 		{
+			#region astvMyTree
+
 			this.astvMyTree.ID = "astvMyTree";
+			this.astvMyTree.EnableManageJSError = false;
 			this.astvMyTree.EnableStripAjaxResponse = true;
 			this.astvMyTree.BasePath = "~/Javascript/astreeview/";
 			this.astvMyTree.DataTableRootNodeValue = "0";
@@ -197,12 +273,31 @@ WHERE p1.[ParentID] " + para;
 			this.astvMyTree.EnableContextMenu = true;
 			this.astvMyTree.EnableDebugMode = false;
 			this.astvMyTree.EnableAjaxOnEditDelete = true;
-			this.astvMyTree.AddNodeProvider = this.Page.Request.Url.GetLeftPart( UriPartial.Path ); //"~/ASTreeViewDemo/ASTreeViewDemo5.aspx";
+			this.astvMyTree.AddNodeProvider = this.Page.Request.Url.GetLeftPart( UriPartial.Path );
 			this.astvMyTree.AdditionalAddRequestParameters = "{'t2':'ajaxAdd'}";
 			this.astvMyTree.EditNodeProvider = "~/ASTreeViewRenameNodeHandler.aspx";
 			this.astvMyTree.DeleteNodeProvider = "~/ASTreeViewDeleteNodeProvider.aspx";
-			this.astvMyTree.LoadNodesProvider = this.Page.Request.Url.GetLeftPart( UriPartial.Path );//"~/ASTreeViewDemo/ASTreeViewDemo5.aspx";
+			this.astvMyTree.LoadNodesProvider = this.Page.Request.Url.GetLeftPart( UriPartial.Path );
 			this.astvMyTree.AdditionalLoadNodesRequestParameters = "{'t1':'ajaxLoad'}";
+
+			this.astvMyTree.OnNodeSelectedScript = string.Format( "nodeSelectHandler{0}(elem);", this.ClientID );
+
+			#endregion
+
+			#region hidden fields and postback trigger
+
+			this.hfSelectedNodeValue.ID = "hfSelectedNodeValue";
+			this.hfSelectedNodeText.ID = "hfSelectedNodeText";
+			this.btnPostBackTrigger.ID = "btnPostBackTrigger";
+			this.btnPostBackTrigger.Click += new EventHandler( btnPostBackTrigger_Click );
+			this.btnPostBackTrigger.Style.Add( "display", "none" );
+
+			#endregion
+		}
+
+		void btnPostBackTrigger_Click( object sender, EventArgs e )
+		{
+			FireNodeSelectedEvent();
 		}
 
 
@@ -247,4 +342,49 @@ WHERE p1.[ParentID] " + para;
 
 		#endregion
 	}
+
+	#region delegate
+
+	public delegate void DemoServerControlNodeSelectedEventHandler( object src, DemoServerControlNodeSelectedEventArgs e );
+
+	/// <summary>
+	/// ASTreeView Node Selected EventArgs
+	/// </summary>
+	public sealed class DemoServerControlNodeSelectedEventArgs : EventArgs
+	{
+		private readonly string _nodeText = string.Empty;
+		private readonly string _nodeValue = string.Empty;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ASTreeViewNodeSelectedEventArgs"/> class.
+		/// </summary>
+		/// <param name="nodeText">The node text.</param>
+		/// <param name="nodeValue">The node value.</param>
+		public DemoServerControlNodeSelectedEventArgs( string nodeText, string nodeValue )
+		{
+			this._nodeText = nodeText;
+			this._nodeValue = nodeValue;
+		}
+
+		/// <summary>
+		/// Gets the node text.
+		/// </summary>
+		/// <value>The node text.</value>
+		public string NodeText
+		{
+			get { return this._nodeText; }
+		}
+
+		/// <summary>
+		/// Gets the node value.
+		/// </summary>
+		/// <value>The node value.</value>
+		public string NodeValue
+		{
+			get { return this._nodeValue; }
+		}
+	}
+
+
+	#endregion
 }
