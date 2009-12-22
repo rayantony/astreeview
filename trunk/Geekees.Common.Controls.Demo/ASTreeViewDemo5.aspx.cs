@@ -22,11 +22,95 @@ namespace Geekees.Common.Controls.Demo
 {
 	public partial class ASTreeViewDemo5 : PageBase
 	{
+		#region declaration
+
+		#endregion
+
+		#region properties
+
+		#endregion
+
+		#region overrided methods
+		/// <summary>
+		/// OnInit
+		/// </summary>
+		/// <param name="e"></param>
+		protected override void OnInit( EventArgs e )
+		{
+			InitializeComponent();
+			base.OnInit( e );
+		}
+		#endregion
+
+		#region event handlers (Page_Load etc...)
+
+		/// <summary>
+		/// Page load logic
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load( object sender, EventArgs e )
 		{
+
 			if( !IsPostBack )
 				GenerateTree();
 		}
+
+		protected void btnGetSelectedNode_Click( object sender, EventArgs e )
+		{
+			string toConsole = string.Empty;
+
+			ASTreeViewNode selectedNode = astvMyTree.GetSelectedNode();
+			if( selectedNode == null )
+				toConsole = ">>no node selected.";
+			else
+				toConsole = string.Format( ">>node selected: text:{0} value:{1}", selectedNode.NodeText, selectedNode.NodeValue );
+
+			this.divConsole.InnerHtml += ( toConsole + "<br />" );
+		}
+
+		protected void btnGetCheckedNodes_Click( object sender, EventArgs e )
+		{
+			List<ASTreeViewNode> checkedNodes = this.astvMyTree.GetCheckedNodes( cbIncludeHalfChecked.Checked );
+			StringBuilder sb = new StringBuilder();
+
+			foreach( ASTreeViewNode node in checkedNodes )
+				sb.Append( string.Format( "[text:{0}, value:{1}]<br />", node.NodeText, node.NodeValue ) );
+
+			this.divConsole.InnerHtml += ( string.Format( ">>nodes checked: <div style='padding-left:20px;'>{0}</div>", sb.ToString() ) );
+		}
+
+		protected void btnSelectionPBTrigger_Click( object sender, EventArgs e )
+		{
+			this.divConsole.InnerHtml += ( string.Format( ">>Selected node: {0}<br />", this.txtSelectedNode.Text ) );
+		}
+
+
+		protected void btnCheckPBTrigger_Click( object sender, EventArgs e )
+		{
+			this.divConsole.InnerHtml += ( string.Format( ">>Checked node: {0}<br />", this.txtCheckedNode.Text ) );
+		}
+
+		#endregion
+
+		#region public methods
+
+		#endregion
+
+		#region protected methods
+
+		#endregion
+
+		#region private methods
+
+		/// <summary>
+		/// initial controls, bind you events etc. here
+		/// </summary>
+		private void InitializeComponent()
+		{
+
+		}
+
 
 		private void GenerateTree()
 		{
@@ -149,31 +233,9 @@ WHERE p1.[ParentID] " + para;
 			}
 			else
 				base.Render( writer );
-			
+
 		}
 
-		protected void btnGetSelectedNode_Click( object sender, EventArgs e )
-		{
-			string toConsole = string.Empty;
-
-			ASTreeViewNode selectedNode = astvMyTree.GetSelectedNode();
-			if( selectedNode == null )
-				toConsole = ">>no node selected.";
-			else
-				toConsole = string.Format( ">>node selected: text:{0} value:{1}", selectedNode.NodeText, selectedNode.NodeValue );
-
-			this.divConsole.InnerHtml += ( toConsole + "<br />" );
-		}
-
-		protected void btnGetCheckedNodes_Click( object sender, EventArgs e )
-		{
-			List<ASTreeViewNode> checkedNodes = this.astvMyTree.GetCheckedNodes( cbIncludeHalfChecked.Checked );
-			StringBuilder sb = new StringBuilder();
-
-			foreach( ASTreeViewNode node in checkedNodes )
-				sb.Append( string.Format( "[text:{0}, value:{1}]<br />", node.NodeText, node.NodeValue ) );
-
-			this.divConsole.InnerHtml += ( string.Format( ">>nodes checked: <div style='padding-left:20px;'>{0}</div>", sb.ToString() ) );
-		}
+		#endregion
 	}
 }

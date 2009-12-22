@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Geekees.Common.Controls, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ASTreeView, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -53,6 +53,9 @@
     <Content Include="ASTreeViewDemo1.aspx" />
     <Content Include="ASTreeViewDemo10.aspx" />
     <Content Include="ASTreeViewDemo11.aspx" />
+    <Content Include="ASTreeViewDemo12.aspx" />
+    <Content Include="ASTreeViewDemo13.aspx" />
+    <Content Include="ASTreeViewDemo14.aspx" />
     <Content Include="ASTreeViewDemo2.aspx" />
     <Content Include="ASTreeViewDemo3.aspx" />
     <Content Include="ASTreeViewDemo4.aspx" />
@@ -89,6 +92,7 @@
     <Content Include="Javascript\astreeview\images\astreeview-dragDrop-indicator2.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-folder-open.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-folder.gif" />
+    <Content Include="Javascript\astreeview\images\astreeview-li-bg.jpg" />
     <Content Include="Javascript\astreeview\images\astreeview-middle-line.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-minus.gif" />
     <Content Include="Javascript\astreeview\images\astreeview-node.gif" />
@@ -162,7 +166,7 @@
     <Content Include="Javascript\astreeview\themes\vista\vista.css" />
     <Content Include="Javascript\contextmenu\contextmenu.css" />
     <Content Include="Javascript\contextmenu\contextmenu_packed.js" />
-    <Content Include="Library\Geekees.Common.Controls.dll" />
+    <Content Include="Library\ASTreeView.dll" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +197,27 @@
     </Compile>
     <Compile Include="ASTreeViewDemo11.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo12.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo12.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo13.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo13.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo14.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo14.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo14.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASTreeViewDemo2.aspx.cs">
       <DependentUpon>ASTreeViewDemo2.aspx</DependentUpon>

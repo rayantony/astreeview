@@ -21,10 +21,58 @@ namespace Geekees.Common.Controls.Demo
 {
 	public partial class ASTreeViewDemo2 : PageBase
 	{
+		#region declaration
+
+		#endregion
+
+		#region properties
+
+		#endregion
+
+		#region overrided methods
+		/// <summary>
+		/// OnInit
+		/// </summary>
+		/// <param name="e"></param>
+		protected override void OnInit( EventArgs e )
+		{
+			InitializeComponent();
+			base.OnInit( e );
+		}
+		#endregion
+
+		#region event handlers (Page_Load etc...)
+
+		/// <summary>
+		/// Page load logic
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void Page_Load( object sender, EventArgs e )
 		{
 			if( !IsPostBack )
+			{
 				GenerateTree();
+			}
+		}
+
+		#endregion
+
+		#region public methods
+
+		#endregion
+
+		#region protected methods
+
+		#endregion
+
+		#region private methods
+
+		/// <summary>
+		/// initial controls, bind you events etc. here
+		/// </summary>
+		private void InitializeComponent()
+		{
 		}
 
 		private void GenerateTree()
@@ -43,6 +91,54 @@ namespace Geekees.Common.Controls.Demo
 			this.astvMyTree.DataSource = ds.Tables[0];
 			this.astvMyTree.DataBind();
 
+
+			StringBuilder sb = new StringBuilder();
+			foreach( ASTreeViewNode node in this.astvMyTree.RootNode.ChildNodes[0].ChildNodes )
+			{
+				ASTreeViewNode nextNode = GetNextNode( node );
+				ASTreeViewNode previousNode = GetPreviousNode( node );
+				sb.Append( ">>[cur Node]:" + node.NodeText
+					+ "[previous]" + ( previousNode == null ? "%NULL%" : previousNode.NodeText )
+					+ "[next]:" + ( nextNode == null ? "%NULL%" : nextNode.NodeText ) + "<br />" );
+			}
+
+			//this.divConsole.InnerHtml = sb.ToString();
+
+		}
+		#endregion
+
+		public ASTreeViewNode GetNextNode( ASTreeViewNode curNode )
+		{
+			if( curNode.ParentNode == null )
+				return null;
+
+			for( int i = 0; i < curNode.ParentNode.ChildNodes.Count; i++ )
+			{
+				if( curNode.ParentNode.ChildNodes[i] == curNode )
+				{
+					if( ( i + 1 ) <= ( curNode.ParentNode.ChildNodes.Count - 1 ) )
+						return curNode.ParentNode.ChildNodes[i + 1];
+				}
+			}
+
+			return null;
+		}
+
+		public ASTreeViewNode GetPreviousNode( ASTreeViewNode curNode )
+		{
+			if( curNode.ParentNode == null )
+				return null;
+
+			for( int i = 0; i < curNode.ParentNode.ChildNodes.Count; i++ )
+			{
+				if( curNode.ParentNode.ChildNodes[i] == curNode )
+				{
+					if( i > 0 )
+						return curNode.ParentNode.ChildNodes[i - 1];
+				}
+			}
+
+			return null;
 		}
 
 		protected override void OnPreRender( EventArgs e )

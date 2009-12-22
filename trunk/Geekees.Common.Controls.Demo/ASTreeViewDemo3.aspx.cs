@@ -20,56 +20,31 @@ namespace Geekees.Common.Controls.Demo
 {
 	public partial class ASTreeViewDemo3 : PageBase
 	{
+		#region declaration
+
+		#endregion
+
+		#region properties
+
+		#endregion
+
+		#region overrided methods
+		/// <summary>
+		/// OnInit
+		/// </summary>
+		/// <param name="e"></param>
 		protected override void OnInit( EventArgs e )
 		{
+			InitializeComponent();
 			base.OnInit( e );
-			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu 1", "alert('current value:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().parentNode.getAttribute('treeNodeValue')" + ");return false;", "otherevent" ) );
-			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu 2", "alert('current text:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().innerHTML" + ");return false;", "otherevent" ) );
-		}
-
-		protected void Page_Load( object sender, EventArgs e )
-		{
-			if( !IsPostBack )
-				GenerateTree();
-		}
-
-		private void GenerateTree()
-		{
-			DataSet ds = OleDbHelper.ExecuteDataset( base.NorthWindConnectionString, CommandType.Text, "select * from [Products]" );
-
-			ASTreeViewDataTableColumnDescriptor descripter = new ASTreeViewDataTableColumnDescriptor( "ProductName"
-				, "ProductID"
-				, "ParentID" );
-
-			this.astvMyTree.DataSourceDescriptor = descripter;
-			this.astvMyTree.DataSource = ds.Tables[0];
-			this.astvMyTree.DataBind();
-
-			if( this.astvMyTree.RootNode.ChildNodes.Count > 0 )
-				this.astvMyTree.RootNode.ChildNodes[0].EnableDeleteContextMenu = false;
-
-		}
-
-		protected override void OnPreRender( EventArgs e )
-		{
-			base.OnPreRender( e );
-
-			this.btnToggleAjaxOnEdit.Text = this.astvMyTree.EnableAjaxOnEditDelete ?
-				"DisableAjaxOnEditDelete" : "EnableAjaxOnEditDelete";
-
-		}
-
-		protected void btnToggleAjaxOnEdit_Click( object sender, EventArgs e )
-		{
-			this.astvMyTree.EnableAjaxOnEditDelete = !this.astvMyTree.EnableAjaxOnEditDelete;
 		}
 
 		protected override void Render( HtmlTextWriter writer )
 		{
 			if( Request.QueryString["t"] == "ajaxAdd" )
 			{
-				string addNodeText = Request.QueryString["addNodeText"];
-				int parentNodeValue = int.Parse( Request.QueryString["parentNodeValue"] );
+				string addNodeText = HttpUtility.UrlDecode( Request.QueryString["addNodeText"] );
+				int parentNodeValue = int.Parse( HttpUtility.UrlDecode( Request.QueryString["parentNodeValue"] ) );
 
 				string maxSql = "select max( productId ) from products";
 				int max = (int)OleDbHelper.ExecuteScalar( base.NorthWindConnectionString, CommandType.Text, maxSql );
@@ -93,10 +68,111 @@ namespace Geekees.Common.Controls.Demo
 				foreach( Control c in ulRoot.Controls )
 					c.RenderControl( writer );
 
+				/*
+				foreach( DataRow dr in dt.Rows )
+				{
+					string productName = dr["ProductName"].ToString();
+					string productId = dr["ProductID"].ToString();
+					string parentId = dr["ParentID"].ToString();
+					int childNodesCount = 0;
+					if( !string.IsNullOrEmpty( dr["ChildNodesCount"].ToString() ) )
+						childNodesCount = int.Parse( dr["ChildNodesCount"].ToString() );
+
+					ASTreeViewLinkNode node = new ASTreeViewLinkNode( productName, productId );
+					node.VirtualNodesCount = childNodesCount;
+					node.VirtualParentKey = productId;
+					node.IsVirtualNode = childNodesCount > 0;
+					node.NavigateUrl = "#";
+					node.AdditionalAttributes.Add( new KeyValuePair<string, string>( "onclick", "return false;" ) );
+
+					root.AppendChild( node );
+				}
+
+
+
+				HtmlGenericControl ulRoot = new HtmlGenericControl( "ul" );
+				astvMyTree.TreeViewHelper.ConvertTree( ulRoot, root, false );
+				foreach( Control c in ulRoot.Controls )
+					c.RenderControl( writer );*/
 			}
 			else
 				base.Render( writer );
 
+		}
+		#endregion
+
+		#region event handlers (Page_Load etc...)
+
+		/// <summary>
+		/// Page load logic
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void Page_Load( object sender, EventArgs e )
+		{
+			if( !IsPostBack )
+			{
+				GenerateTree();
+			}
+		}
+
+		#endregion
+
+		#region public methods
+
+		#endregion
+
+		#region protected methods
+
+		#endregion
+
+		#region private methods
+
+		/// <summary>
+		/// initial controls, bind you events etc. here
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu 1", "alert('current value:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().parentNode.getAttribute('treeNodeValue')" + ");return false;", "otherevent" ) );
+			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu 2", "alert('current text:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().innerHTML" + ");return false;", "otherevent" ) );
+		}
+
+
+		private void GenerateTree()
+		{
+			//bind data from data table
+			//string path = System.AppDomain.CurrentDomain.BaseDirectory;
+			//string connStr = string.Format( "Provider=Microsoft.Jet.OLEDB.4.0;Data source={0}db\\NorthWind.mdb", path );
+
+			DataSet ds = OleDbHelper.ExecuteDataset( base.NorthWindConnectionString, CommandType.Text, "select * from [Products]" );
+
+			ASTreeViewDataTableColumnDescriptor descripter = new ASTreeViewDataTableColumnDescriptor( "ProductName"
+				, "ProductID"
+				, "ParentID" );
+
+			this.astvMyTree.DataSourceDescriptor = descripter;
+			this.astvMyTree.DataSource = ds.Tables[0];
+			this.astvMyTree.DataBind();
+
+			if( this.astvMyTree.RootNode.ChildNodes.Count > 0 )
+				this.astvMyTree.RootNode.ChildNodes[0].EnableDeleteContextMenu = false;
+		}
+
+		#endregion
+
+
+		protected override void OnPreRender( EventArgs e )
+		{
+			base.OnPreRender( e );
+
+			this.btnToggleAjaxOnEdit.Text = this.astvMyTree.EnableAjaxOnEditDelete ?
+				"DisableAjaxOnEditDelete" : "EnableAjaxOnEditDelete";
+
+		}
+
+		protected void btnToggleAjaxOnEdit_Click( object sender, EventArgs e )
+		{
+			this.astvMyTree.EnableAjaxOnEditDelete = !this.astvMyTree.EnableAjaxOnEditDelete;
 		}
 	}
 }

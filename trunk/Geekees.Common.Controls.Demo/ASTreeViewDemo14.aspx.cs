@@ -17,9 +17,10 @@ using Geekees.Common.Utilities.Xml;
 
 #endregion
 
+
 namespace Geekees.Common.Controls.Demo
 {
-	public partial class ASTreeViewDemo4 : PageBase
+	public partial class ASTreeViewDemo14 : System.Web.UI.Page
 	{
 		#region declaration
 
@@ -39,6 +40,23 @@ namespace Geekees.Common.Controls.Demo
 			InitializeComponent();
 			base.OnInit( e );
 		}
+
+		protected override void OnPreRender( EventArgs e )
+		{
+			base.OnPreRender( e );
+
+			this.btnEnableHorizontalLock.Text = this.astvMyTree.EnableHorizontalLock ?
+			"DisableHorizontalLock" : "EnableHorizontalLock";
+
+			this.btnEnableContainerDragDrop.Text = this.astvMyTree.EnableContainerDragDrop ?
+			"DisableContainerDragDrop" : "EnableContainerDragDrop";
+
+			this.btnEnableFixedDepthDragDrop.Text = this.astvMyTree.EnableFixedDepthDragDrop ?
+			"DisableFixedDepthDragDrop" : "EnableFixedDepthDragDrop";
+
+
+		}
+
 		#endregion
 
 		#region event handlers (Page_Load etc...)
@@ -54,10 +72,19 @@ namespace Geekees.Common.Controls.Demo
 				GenerateTree();
 		}
 
-		protected void btnGetTreeViewXML_Click( object sender, EventArgs e )
+		protected void btnEnableHorizontalLock_Click( object sender, EventArgs e )
 		{
-			string toConsole = XmlHelper.GetFormattedXmlString( this.astvMyTree.GetTreeViewXML(), true );
-			this.divConsole.InnerHtml += ( string.Format( ">>Treeview XML: <pre style='padding-left:20px;'>{0}</pre>", toConsole.ToString() ) );
+			this.astvMyTree.EnableHorizontalLock = !this.astvMyTree.EnableHorizontalLock;
+		}
+
+		protected void btnEnableContainerDragDrop_Click( object sender, EventArgs e )
+		{
+			this.astvMyTree.EnableContainerDragDrop = !this.astvMyTree.EnableContainerDragDrop;
+		}
+
+		protected void btnEnableFixedDepthDragDrop_Click( object sender, EventArgs e )
+		{
+			this.astvMyTree.EnableFixedDepthDragDrop = !this.astvMyTree.EnableFixedDepthDragDrop;
 		}
 
 		#endregion
@@ -92,7 +119,6 @@ namespace Geekees.Common.Controls.Demo
 			this.astvMyTree.DataSourceDescriptor = descripter;
 			this.astvMyTree.DataSource = doc;
 			this.astvMyTree.DataBind();
-
 		}
 
 		#endregion

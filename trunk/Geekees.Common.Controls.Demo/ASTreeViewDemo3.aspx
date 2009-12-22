@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASTreeViewDemo3.aspx.cs" Inherits="Geekees.Common.Controls.Demo.ASTreeViewDemo3" %>
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc1" %>
 
-<%@ Register Assembly="Geekees.Common.Controls" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
+<%@ Register Assembly="ASTreeView" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -26,24 +26,27 @@
 			<tr valign="top">
 				<td width="400">
 					<ct:ASTreeView ID="astvMyTree" 
-						runat="server"
-						BasePath="~/Javascript/astreeview/"
-						DataTableRootNodeValue="0"
-						EnableRoot="false" 
-						EnableNodeSelection="true" 
-						EnableCheckbox="false" 
-						EnableDragDrop="true" 
-						EnableTreeLines="true"
-						EnableNodeIcon="true"
-						EnableCustomizedNodeIcon="false"
-						AutoPostBack="false"
-						EnableDebugMode="false"
-						EnableContextMenu="true"
-						EnableAjaxOnEditDelete="true"
-						EditNodeProvider="~/ASTreeViewRenameNodeHandler.aspx"
-						DeleteNodeProvider="~/ASTreeViewDeleteNodeProvider.aspx"
-						AddNodeProvider="~/ASTreeViewDemo3.aspx"
-						AdditionalAddRequestParameters="{'t':'ajaxAdd'}"	/>
+							runat="server"
+							BasePath="~/Javascript/astreeview/"
+							DataTableRootNodeValue="0"
+							EnableRoot="false" 
+							EnableNodeSelection="true" 
+							EnableCheckbox="false" 
+							EnableDragDrop="true" 
+							EnableTreeLines="true"
+							EnableNodeIcon="true"
+							EnableCustomizedNodeIcon="false"
+							AutoPostBack="false"
+							EnableDebugMode="false"
+							EnableContextMenu="true"
+							EnableAjaxOnEditDelete="true"
+							EditNodeProvider="~/ASTreeViewRenameNodeHandler.aspx"
+							DeleteNodeProvider="~/ASTreeViewDeleteNodeProvider.aspx"
+							AddNodeProvider="~/ASTreeViewDemo3.aspx"
+							AdditionalAddRequestParameters="{'t':'ajaxAdd'}"
+							AddNodePromptDefaultValue="New Node" 
+							AddNodePromptMessage="Hello, please add a new node:"
+							AddNodeDataValueProvider="return prompt('new ndoe? under:' + elem.getAttribute('treeNodeValue'),'new node name');" />
 				</td>
 				<td>
 				

@@ -225,5 +225,59 @@ namespace Geekees.Common.Controls.Demo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink ashlASTreeViewDemo11;
+        
+        /// <summary>
+        /// liASTreeViewDemo12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liASTreeViewDemo12;
+        
+        /// <summary>
+        /// ashlASTreeViewDemo12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ashlASTreeViewDemo12;
+        
+        /// <summary>
+        /// liASTreeViewDemo13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liASTreeViewDemo13;
+        
+        /// <summary>
+        /// ashlASTreeViewDemo13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ashlASTreeViewDemo13;
+        
+        /// <summary>
+        /// liASTreeViewDemo14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liASTreeViewDemo14;
+        
+        /// <summary>
+        /// ashlASTreeViewDemo14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ashlASTreeViewDemo14;
     }
 }

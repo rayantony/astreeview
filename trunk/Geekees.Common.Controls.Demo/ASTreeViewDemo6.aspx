@@ -1,7 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASTreeViewDemo6.aspx.cs" Inherits="Geekees.Common.Controls.Demo.ASTreeViewDemo6" %>
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc1" %>
 
-<%@ Register Assembly="Geekees.Common.Controls" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
+<%@ Register Assembly="ASTreeView" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -30,55 +30,57 @@
 		<table>
 			<tr valign="top">
 				<td width="400">
-					multi-selection:<ct:ASDropDownTreeView ID="astvMyTree" 
-						runat="server"
-						BasePath="~/Javascript/astreeview/"
-						DataTableRootNodeValue="0"
-						EnableRoot="false" 
-						EnableNodeSelection="false" 
-						EnableCheckbox="true" 
-						EnableDragDrop="true" 
-						EnableTreeLines="true"
-						EnableNodeIcon="true"
-						EnableCustomizedNodeIcon="false"
-						EnableDebugMode="false"
-						EnableRequiredValidator="false"
-						InitialDropdownText="<span style='color:green;'>Please check</span>" 
-						Width="300"
-						EnableCloseOnOutsideClick="true" 
-						EnableHalfCheckedAsChecked="true" 
-						RequiredValidatorValidationGroup="vgCheck"
-						EnableContextMenuAdd="false" />
-						
-					<br />
-					<br />
-					single-selection:<ct:ASDropDownTreeView ID="astvMyTree2" 
-							runat="server"
-							BasePath="~/Javascript/astreeview/"
-							DataTableRootNodeValue="0"
-							EnableRoot="false" 
-							EnableNodeSelection="true" 
-							EnableCheckbox="false" 
-							EnableDragDrop="false" 
-							EnableTreeLines="true"
-							EnableNodeIcon="true"
-							EnableCustomizedNodeIcon="false"
-							EnableDebugMode="false"
-							EnableRequiredValidator="true"
-							InitialDropdownText="Please select" 
-							Width="300"
-							EnableCloseOnOutsideClick="true" 
-							EnableHalfCheckedAsChecked="true"
-							RequiredValidatorValidationGroup="vgSelect" 
-							EnableContextMenuAdd="false"
-							EnableContextMenuDelete="false"
-							EnableAjaxOnEditDelete="true"
-							AddNodeProvider="~/ASTreeViewDemo6.aspx"
-							AdditionalAddRequestParameters="{'t2':'ajaxAdd'}"
-							EditNodeProvider="~/ASTreeViewRenameNodeHandler.aspx"
-							DeleteNodeProvider="~/ASTreeViewDeleteNodeProvider.aspx"
-							LoadNodesProvider="~/ASTreeViewDemo6.aspx"
-							AdditionalLoadNodesRequestParameters="{'t1':'ajaxLoad'}" />
+					<ct:ASDropDownTreeView ID="astvMyTree" 
+										runat="server"
+										BasePath="~/Javascript/astreeview/"
+										DataTableRootNodeValue="0"
+										EnableRoot="false" 
+										EnableNodeSelection="false" 
+										EnableCheckbox="true" 
+										EnableDragDrop="true" 
+										EnableTreeLines="true"
+										EnableNodeIcon="true"
+										EnableCustomizedNodeIcon="false"
+										EnableDebugMode="false"
+										EnableRequiredValidator="true"
+										InitialDropdownText="<span style='color:green;'>Please select</span>" 
+										Width="300"
+										EnableCloseOnOutsideClick="true" 
+										EnableHalfCheckedAsChecked="true" 
+										RequiredValidatorValidationGroup="vgCheck"
+										EnableContextMenuAdd="false"
+										MaxDropdownHeight="200"/>
+								<br />
+								<br />
+								<ct:ASDropDownTreeView ID="astvMyTree2" 
+										runat="server"
+										BasePath="~/Javascript/astreeview/"
+										DataTableRootNodeValue="0"
+										EnableRoot="false" 
+										EnableNodeSelection="true" 
+										EnableCheckbox="false" 
+										EnableDragDrop="false" 
+										EnableTreeLines="true"
+										EnableNodeIcon="true"
+										EnableCustomizedNodeIcon="false"
+										EnableDebugMode="false"
+										EnableRequiredValidator="true"
+										InitialDropdownText="Please select" 
+										Width="300"
+										EnableCloseOnOutsideClick="true" 
+										EnableHalfCheckedAsChecked="true"
+										RequiredValidatorValidationGroup="vgSelect" 
+										EnableContextMenuAdd="false" 
+										EnableCloseOnNodeSelection="false"
+										
+									EnableAjaxOnEditDelete="true"
+									EnableContextMenuDelete="false"
+									AddNodeProvider="~/ASTreeViewDemo6.aspx"
+									AdditionalAddRequestParameters="{'t2':'ajaxAdd'}"
+									EditNodeProvider="~/ASTreeViewRenameNodeHandler.aspx"
+									DeleteNodeProvider="~/ASTreeViewDeleteNodeProvider.aspx"
+									LoadNodesProvider="~/ASTreeViewDemo6.aspx"
+									AdditionalLoadNodesRequestParameters="{'t1':'ajaxLoad'}" />
 				</td>
 				<td>
 				
