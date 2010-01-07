@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ASTreeView, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ASTreeView, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -67,6 +67,8 @@
     <Content Include="ASTreeViewDemo9.aspx" />
     <Content Include="ASTreeViewDemoServerControl.aspx" />
     <Content Include="ASTreeViewRenameNodeHandler.aspx" />
+    <None Include="CHANGE_LOG" />
+    <Content Include="bin\ASTreeView.xml" />
     <Content Include="db\NorthWind.mdb">
     </Content>
     <Content Include="Header.ascx" />
@@ -167,6 +169,7 @@
     <Content Include="Javascript\contextmenu\contextmenu.css" />
     <Content Include="Javascript\contextmenu\contextmenu_packed.js" />
     <Content Include="Library\ASTreeView.dll" />
+    <Content Include="Library\ASTreeView.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
