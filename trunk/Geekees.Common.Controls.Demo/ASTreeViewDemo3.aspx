@@ -13,6 +13,29 @@
 	
 	<script src="<%=ResolveUrl("~/javascript/astreeview/astreeview_packed.js")%>" type="text/javascript"></script>
 	<script src="<%=ResolveUrl("~/javascript/contextmenu/contextmenu_packed.js")%>" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		//parameter must be "elem"
+		function addedHandler( elem ){
+			document.getElementById( "<%=divConsole.ClientID %>" ).innerHTML 
+			+= ( ">>edit completed. [Node]" + elem.getAttribute("treeNodeValue") 
+			+ "<br />" );
+		}
+		
+		//parameter must be "elem"
+		function editedHandler( elem ){
+			document.getElementById( "<%=divConsole.ClientID %>" ).innerHTML 
+			+= ( ">>edit completed. [Node]" + elem.getAttribute("treeNodeValue") 
+			+ "<br />" );
+		}
+		
+		//parameter must be "val"
+		function deletedHandler( val ){
+			document.getElementById( "<%=divConsole.ClientID %>" ).innerHTML 
+			+= ( ">>delete completed. [Node]" + val
+			+ "<br />" );
+		}
+	</script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,7 +69,10 @@
 							AdditionalAddRequestParameters="{'t':'ajaxAdd'}"
 							AddNodePromptDefaultValue="New Node" 
 							AddNodePromptMessage="Hello, please add a new node:"
-							AddNodeDataValueProvider="return prompt('new ndoe? under:' + elem.getAttribute('treeNodeValue'),'new node name');" />
+							AddNodeDataValueProvider="return prompt('new ndoe? under:' + elem.getAttribute('treeNodeValue'),'new node name');"
+							OnNodeAddedScript="addedHandler(elem)"	
+							OnNodeEditedScript="editedHandler(elem)"
+							OnNodeDeletedScript="deletedHandler(val)"  />
 				</td>
 				<td>
 				

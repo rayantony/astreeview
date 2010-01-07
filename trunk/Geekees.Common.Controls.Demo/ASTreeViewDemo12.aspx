@@ -59,6 +59,20 @@
 			+ "<br />" );
 		}
 		
+		//parameter must be "elem"
+		function editedHandler( elem ){
+			document.getElementById( "<%=divConsole.ClientID %>" ).innerHTML 
+			+= ( ">>edit completed. [Node]" + elem.getAttribute("treeNodeValue") 
+			+ "<br />" );
+		}
+		
+		//parameter must be "val"
+		function deletedHandler( val ){
+			document.getElementById( "<%=divConsole.ClientID %>" ).innerHTML 
+			+= ( ">>delete completed. [Node]" + val
+			+ "<br />" );
+		}
+		
 		//elem is the LI element of each node
 		var displayNodeFunc = function( elem ){
 			document.getElementById( "<%=divConsole.ClientID %>" ).innerHTML 
@@ -99,7 +113,9 @@
 						OnNodeSelectedScript="nodeSelectHandler(elem);"
 						OnNodeCheckedScript="nodeCheckHandler(elem);"
 						OnNodeDragAndDropCompleteScript="dndCompleteHandler( elem )"
-						OnNodeDragAndDropStartScript="dndStartHandler( elem )" />
+						OnNodeDragAndDropStartScript="dndStartHandler( elem )" 
+						OnNodeEditedScript="editedHandler(elem)"
+						OnNodeDeletedScript="deletedHandler(val)" />
 				</td>
 				<td>
 				
