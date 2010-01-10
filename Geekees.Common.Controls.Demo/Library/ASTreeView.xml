@@ -322,19 +322,6 @@
         <member name="T:Geekees.Common.Controls.ASTreeView">
             <summary>
             A full functinal treeview control
-            version: 1.4.1
-            * add EnableTreeNodesViewState
-            * add EnableStripAjaxResponse
-            * add StripAjaxResponseRegex
-            * add AjaxResponseStartTag
-            * add AjaxResponseEndTag
-            * add EnableHorizontalLock
-            * add EnableFixedDepthDragDrop
-            * add OnNodeDragAndDropStartScript
-            * add AddNodePromptDefaultValue
-            * add AddNodePromptMessage
-            * add AddNodeDataValueProvider
-            * fix setting RootNodeText in OnInit not take effect problem
             </summary>
         </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.#ctor">
@@ -585,6 +572,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Geekees.Common.Controls.ASTreeView.GenerateASTreeViewInitialScript">
+            <summary>
+            Generates the ASTreeView initial script.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.GenerateASTreeViewScript">
             <summary>
             Generates the AS tree view script.
@@ -613,6 +606,14 @@
             Raises the <see cref="E:System.Web.UI.Control.PreRender"></see> event.
             </summary>
             <param name="e">An <see cref="T:System.EventArgs"></see> object that contains the event data.</param>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASTreeView.IsControlInUpdatePanelAlwaysMode">
+            <summary>
+            Determines whether the treeview control in update panel and mode = always.
+            </summary>
+            <returns>
+            	<c>true</c> if the control is in update panel mode = always; otherwise, <c>false</c>.
+            </returns>
         </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.LoadViewState(System.Object)">
             <summary>
