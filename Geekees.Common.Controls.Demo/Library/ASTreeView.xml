@@ -321,7 +321,7 @@
         </member>
         <member name="T:Geekees.Common.Controls.ASTreeView">
             <summary>
-            A full functinal treeview control
+            A full functinal treeview control.
             </summary>
         </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.#ctor">
@@ -434,6 +434,11 @@
             Expands to depth.
             </summary>
             <param name="depth">The depth.</param>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASTreeView.ForceRenderInitialScript">
+            <summary>
+            Forces the render initial script. Especially for this kind of situation: astreeview in a updatepanel which UpdateMode=Conditional, and a trigger calls this update panel's Update() methods. before call Update(), you need call ForceRenderIntialScript first.
+            </summary>
         </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.InitializeControls">
             <summary>
@@ -607,12 +612,12 @@
             </summary>
             <param name="e">An <see cref="T:System.EventArgs"></see> object that contains the event data.</param>
         </member>
-        <member name="M:Geekees.Common.Controls.ASTreeView.IsControlInUpdatePanelAlwaysMode">
+        <member name="M:Geekees.Common.Controls.ASTreeView.IsControlInPartialRendering">
             <summary>
-            Determines whether the treeview control in update panel and mode = always.
+            Determines whether control is in partial rendering.
             </summary>
             <returns>
-            	<c>true</c> if the control is in update panel mode = always; otherwise, <c>false</c>.
+            	<c>true</c> if control is in partial rendering otherwise, <c>false</c>.
             </returns>
         </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.LoadViewState(System.Object)">
