@@ -997,6 +997,11 @@
             EnableContainerDragDrop
             </summary>
         </member>
+        <member name="P:Geekees.Common.Controls.ASTreeView.EnableThreeStateCheckBox">
+            <summary>
+            EnableThreeStateCheckBox
+            </summary>
+        </member>
         <member name="P:Geekees.Common.Controls.ASTreeView.DataSourceDescriptor">
             <summary>
             Gets or sets the data source descriptor. Datasource descriptor converts datasource to treeview nodes.

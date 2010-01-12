@@ -61,6 +61,9 @@ namespace Geekees.Common.Controls.Demo
 
 			this.btnToggleEscapeInput.Text = this.astvMyTree.EnableEscapeInput ?
 				"DisableEscapeInput" : "EnableEscapeInput";
+
+			this.btnToggleEnableThreeStateCheckBox.Text = this.astvMyTree.EnableThreeStateCheckBox ?
+				"DisableThreeStateCheckBox" : "EnableThreeStateCheckBox";
 		}
 
 		protected override void Render( HtmlTextWriter writer )
@@ -180,7 +183,11 @@ namespace Geekees.Common.Controls.Demo
 		protected void btnToggleCheckbox_Click( object sender, EventArgs e )
 		{
 			this.astvMyTree.EnableCheckbox = !this.astvMyTree.EnableCheckbox;
+		}
 
+		protected void btnEnableThreeStateCheckBox_Click( object sender, EventArgs e )
+		{
+			this.astvMyTree.EnableThreeStateCheckBox = !this.astvMyTree.EnableThreeStateCheckBox;
 		}
 
 		protected void btnToggleDefaultNodeIcon_Click( object sender, EventArgs e )
