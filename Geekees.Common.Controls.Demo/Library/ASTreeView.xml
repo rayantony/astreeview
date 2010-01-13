@@ -589,6 +589,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Geekees.Common.Controls.ASTreeView.ProcessImageUrl(System.String)">
+            <summary>
+            Processes the image URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns></returns>
+        </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.OnLoad(System.EventArgs)">
             <summary>
             Raises the <see cref="E:System.Web.UI.Control.Load"></see> event.
@@ -1768,8 +1775,26 @@
             </summary>
             <exclude/>
         </member>
-        <member name="T:Geekees.Common.Controls.ASContextMenu">
-            <exclude/>
+        <member name="M:Geekees.Common.Controls.ASContextMenu.ForceRenderInitialScript">
+            <summary>
+            Forces the render initial script. Especially for this kind of situation: astreeview in a updatepanel which UpdateMode=Conditional, and a trigger calls this update panel's Update() methods. before call Update(), you need call ForceRenderIntialScript first.
+            </summary>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASContextMenu.IsInUpdateAsyncPostback">
+            <summary>
+            Determines whether [is in update async postback].
+            </summary>
+            <returns>
+            	<c>true</c> if [is in update async postback]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASContextMenu.IsControlInPartialRendering">
+            <summary>
+            Determines whether control is in partial rendering.
+            </summary>
+            <returns>
+            	<c>true</c> if control is in partial rendering otherwise, <c>false</c>.
+            </returns>
         </member>
         <member name="M:Geekees.Common.Controls.ASContextMenu.RenderContents(System.Web.UI.HtmlTextWriter)">
             <summary>
