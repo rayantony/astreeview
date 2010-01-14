@@ -3596,6 +3596,13 @@
             Initializes the validator.
             </summary>
         </member>
+        <member name="M:Geekees.Common.Controls.ASDropDownTreeView.ProcessImageUrl(System.String)">
+            <summary>
+            Processes the image URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns></returns>
+        </member>
         <member name="M:Geekees.Common.Controls.ASDropDownTreeView.ValidateCheckSelect">
             <summary>
             Validates the check select.
