@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ASTreeView, Version=1.4.7.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ASTreeView, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -56,6 +56,7 @@
     <Content Include="ASTreeViewDemo12.aspx" />
     <Content Include="ASTreeViewDemo13.aspx" />
     <Content Include="ASTreeViewDemo14.aspx" />
+    <Content Include="ASTreeViewDemo15.aspx" />
     <Content Include="ASTreeViewDemo2.aspx" />
     <Content Include="ASTreeViewDemo3.aspx" />
     <Content Include="ASTreeViewDemo4.aspx" />
@@ -68,7 +69,6 @@
     <Content Include="ASTreeViewDemoServerControl.aspx" />
     <Content Include="ASTreeViewRenameNodeHandler.aspx" />
     <None Include="CHANGE_LOG" />
-    <Content Include="bin\ASTreeView.xml" />
     <Content Include="db\NorthWind.mdb">
     </Content>
     <Content Include="Header.ascx" />
@@ -222,6 +222,13 @@
     <Compile Include="ASTreeViewDemo14.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo14.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ASTreeViewDemo15.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo15.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo15.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASTreeViewDemo2.aspx.cs">
       <DependentUpon>ASTreeViewDemo2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -311,6 +318,9 @@
     <None Include="astreeview-node.xsd">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />

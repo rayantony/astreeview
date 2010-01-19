@@ -12,12 +12,21 @@ namespace Geekees.Common.Controls.Demo {
     
     
     /// <summary>
-    /// ASTreeViewDemo1 class.
+    /// ASTreeViewDemo15 class.
     /// </summary>
     /// <remarks>
     /// Auto-generated class.
     /// </remarks>
-    public partial class ASTreeViewDemo1 {
+    public partial class ASTreeViewDemo15 {
+        
+        /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// form1 control.
@@ -38,33 +47,6 @@ namespace Geekees.Common.Controls.Demo {
         protected global::Geekees.Common.Controls.Demo.Header Header1;
         
         /// <summary>
-        /// btnToggleDragDrop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleDragDrop;
-        
-        /// <summary>
-        /// btnToggleTreeLines control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleTreeLines;
-        
-        /// <summary>
-        /// btnToggleNodeIcon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleNodeIcon;
-        
-        /// <summary>
         /// btnToggleCheckbox control.
         /// </summary>
         /// <remarks>
@@ -74,78 +56,6 @@ namespace Geekees.Common.Controls.Demo {
         protected global::System.Web.UI.WebControls.Button btnToggleCheckbox;
         
         /// <summary>
-        /// btnToggleDefaultNodeIcon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleDefaultNodeIcon;
-        
-        /// <summary>
-        /// btnExpandAllClient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExpandAllClient;
-        
-        /// <summary>
-        /// btnCollapseAllClient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCollapseAllClient;
-        
-        /// <summary>
-        /// btnToggleExpandCollapseAllClient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleExpandCollapseAllClient;
-        
-        /// <summary>
-        /// btnToggleContextMenu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleContextMenu;
-        
-        /// <summary>
-        /// btnGetTreeViewXML control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGetTreeViewXML;
-        
-        /// <summary>
-        /// btnToggleMultiLineEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleMultiLineEdit;
-        
-        /// <summary>
-        /// btnToggleEscapeInput control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnToggleEscapeInput;
-        
-        /// <summary>
         /// btnToggleEnableThreeStateCheckbox control.
         /// </summary>
         /// <remarks>
@@ -153,6 +63,60 @@ namespace Geekees.Common.Controls.Demo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnToggleEnableThreeStateCheckbox;
+        
+        /// <summary>
+        /// btnToggleEnableLeafOnlyCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnToggleEnableLeafOnlyCheckbox;
+        
+        /// <summary>
+        /// btnClearCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClearCheck;
+        
+        /// <summary>
+        /// cbIncludeHalfChecked control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbIncludeHalfChecked;
+        
+        /// <summary>
+        /// btnGetCheckedNodes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetCheckedNodes;
+        
+        /// <summary>
+        /// btnMakeCheckedNodesUnselectable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMakeCheckedNodesUnselectable;
+        
+        /// <summary>
+        /// btnMakeCheckedNodesSelectable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMakeCheckedNodesSelectable;
         
         /// <summary>
         /// astvMyTree control.

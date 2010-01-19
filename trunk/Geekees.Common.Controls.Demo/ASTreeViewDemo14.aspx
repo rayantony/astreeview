@@ -39,9 +39,10 @@
     	<uc1:Header id="Header1" runat="server"></uc1:Header>
 		<h2> Advanced Drag and Drop</h2>
     <div>
-		<asp:Button ID="btnEnableHorizontalLock" CssClass="button" runat="server" ResKey="EnableHorizontalLock" OnClick="btnEnableHorizontalLock_Click" />
-		<asp:Button ID="btnEnableContainerDragDrop" CssClass="button" runat="server" ResKey="EnableContainerDragDrop" OnClick="btnEnableContainerDragDrop_Click" />
-		<asp:Button ID="btnEnableFixedDepthDragDrop" CssClass="button" runat="server" ResKey="EnableFixedDepthDragDrop" OnClick="btnEnableFixedDepthDragDrop_Click" />
+		<asp:Button ID="btnEnableHorizontalLock" CssClass="button" runat="server" Text="EnableHorizontalLock" OnClick="btnEnableHorizontalLock_Click" />
+		<asp:Button ID="btnEnableContainerDragDrop" CssClass="button" runat="server" Text="EnableContainerDragDrop" OnClick="btnEnableContainerDragDrop_Click" />
+		<asp:Button ID="btnEnableFixedDepthDragDrop" CssClass="button" runat="server" Text="EnableFixedDepthDragDrop" OnClick="btnEnableFixedDepthDragDrop_Click" />
+		<asp:Button ID="btnEnableFixedParentDragDrop" CssClass="button" runat="server" Text="EnableFixedParentDragDrop" OnClick="btnEnableFixedParentDragDrop_Click" />
 						
     </div>
     <div>
