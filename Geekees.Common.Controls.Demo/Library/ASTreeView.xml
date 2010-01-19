@@ -135,7 +135,7 @@
             <param name="node">The node.</param>
             <returns></returns>
         </member>
-        <member name="M:Geekees.Common.Controls.ASTreeViewHelper.ManageCheckBoxState(Geekees.Common.Controls.ASTreeViewNode)">
+        <member name="M:Geekees.Common.Controls.ASTreeViewHelper.ManageCheckboxState(Geekees.Common.Controls.ASTreeViewNode)">
             <summary>
             Manages the state of the check box.
             </summary>
@@ -159,6 +159,13 @@
         <member name="M:Geekees.Common.Controls.ASTreeViewHelper.ObfuscateScript(System.String)">
             <summary>
             Obfuscates the script.
+            </summary>
+            <param name="source">The source.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASTreeViewHelper.MinifyScript(System.String)">
+            <summary>
+            Minifies the script.
             </summary>
             <param name="source">The source.</param>
             <returns></returns>
@@ -200,9 +207,6 @@
             <summary>
             Gets the value of the Json string.
             </summary>
-        </member>
-        <member name="T:Geekees.Common.Utilities.JavaScriptMinifier">
-            <exclude/>
         </member>
         <member name="T:Geekees.Common.Utilities.Json.JsonObject">
             <summary>
@@ -438,6 +442,16 @@
         <member name="M:Geekees.Common.Controls.ASTreeView.ForceRenderInitialScript">
             <summary>
             Forces the render initial script. Especially for this kind of situation: astreeview in a updatepanel which UpdateMode=Conditional, and a trigger calls this update panel's Update() methods. before call Update(), you need call ForceRenderIntialScript first.
+            </summary>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASTreeView.ClearNodesCheck">
+            <summary>
+            Clears the nodes check.
+            </summary>
+        </member>
+        <member name="M:Geekees.Common.Controls.ASTreeView.ClearNodesSelection">
+            <summary>
+            Clears the nodes selection.
             </summary>
         </member>
         <member name="M:Geekees.Common.Controls.ASTreeView.InitializeControls">
@@ -701,6 +715,12 @@
             </summary>
             <value></value>
             <returns>The programmatic identifier assigned to the control.</returns>
+        </member>
+        <member name="P:Geekees.Common.Controls.ASTreeView.Version">
+            <summary>
+            Gets the version of the ASTreeView Control.
+            </summary>
+            <value>The version.</value>
         </member>
         <member name="P:Geekees.Common.Controls.ASTreeView.EnableAutoLinkScriptFiles">
             <summary>
@@ -988,8 +1008,19 @@
         </member>
         <member name="P:Geekees.Common.Controls.ASTreeView.EnableFixedDepthDragDrop">
             <summary>
-            EnableFixedDepthDragDrop
+            Gets or sets a value indicating whether the nodes can be dragged and dropped only it the depth which is same as the nodes'. Please note if the EnableFixedParentDragDrop is true, EnableFixedDepthDragDrop is true.
             </summary>
+            <value>
+            	<c>true</c> if [enable fixed depth drag drop]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Geekees.Common.Controls.ASTreeView.EnableFixedParentDragDrop">
+            <summary>
+            Gets or sets a value indicating whether the nodes are only can be drag drop under their parent.
+            </summary>
+            <value>
+            	<c>true</c> if [enable fixed parent drag drop]; otherwise, <c>false</c>.
+            </value>
         </member>
         <member name="P:Geekees.Common.Controls.ASTreeView.EnableHorizontalLock">
             <summary>
@@ -1004,10 +1035,21 @@
             EnableContainerDragDrop
             </summary>
         </member>
-        <member name="P:Geekees.Common.Controls.ASTreeView.EnableThreeStateCheckBox">
+        <member name="P:Geekees.Common.Controls.ASTreeView.EnableThreeStateCheckbox">
             <summary>
-            EnableThreeStateCheckBox
+            Gets or sets a value indicating whether to enable three state checkbox. Please note that if EnableLeafOnlyCheckbox=true, then EnableThreeStateCheckbox will automatically be false;
             </summary>
+            <value>
+            	<c>true</c> if [enable three state checkbox]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Geekees.Common.Controls.ASTreeView.EnableLeafOnlyCheckbox">
+            <summary>
+            Gets or sets a value indicating whether to enable leaf only checkbox.
+            </summary>
+            <value>
+            	<c>true</c> if [enable leaf only checkbox]; otherwise, <c>false</c>.
+            </value>
         </member>
         <member name="P:Geekees.Common.Controls.ASTreeView.DataSourceDescriptor">
             <summary>
@@ -2383,9 +2425,6 @@
             </summary>
             <value>The img drag drop indicator sub.</value>
         </member>
-        <member name="T:Geekees.Common.Controls.ASContextMenuItem">
-            <exclude/>
-        </member>
         <member name="T:Geekees.Common.Utilities.Json.JsonTokenType">
             <summary>
             Defines the high level Json tokens.
@@ -2894,6 +2933,18 @@
             </summary>
             <value><c>true</c> if [enable children]; otherwise, <c>false</c>.</value>
         </member>
+        <member name="P:Geekees.Common.Controls.ASTreeViewNode.EnableCheckbox">
+            <summary>
+            Gets or sets a value indicating whether to display the checkbox for the node.
+            </summary>
+            <value><c>true</c> if [enable checkbox]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Geekees.Common.Controls.ASTreeViewNode.EnableSelection">
+            <summary>
+            Gets or sets a value indicating whether the node is selectable.
+            </summary>
+            <value><c>true</c> if [enable selection]; otherwise, <c>false</c>.</value>
+        </member>
         <member name="P:Geekees.Common.Controls.ASTreeViewNode.AdditionalAttributes">
             <summary>
             Gets or sets the additional attributes on this node.
@@ -3014,9 +3065,6 @@
             <value>The tooltip.</value>
         </member>
         <member name="T:JsonDemo.JsonDemo">
-            <exclude/>
-        </member>
-        <member name="T:Geekees.Common.Controls.ASContextMenuHelper">
             <exclude/>
         </member>
         <member name="T:Geekees.Common.Utilities.Json.JsonNumber">
@@ -3907,9 +3955,6 @@
             <summary>
             An unordered collection of values, delimted by square brackets.
             </summary>
-        </member>
-        <member name="T:Geekees.Common.Utilities.JavaScriptObfuscator">
-            <exclude/>
         </member>
     </members>
 </doc>

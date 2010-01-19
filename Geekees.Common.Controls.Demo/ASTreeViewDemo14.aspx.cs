@@ -54,7 +54,8 @@ namespace Geekees.Common.Controls.Demo
 			this.btnEnableFixedDepthDragDrop.Text = this.astvMyTree.EnableFixedDepthDragDrop ?
 			"DisableFixedDepthDragDrop" : "EnableFixedDepthDragDrop";
 
-
+			this.btnEnableFixedParentDragDrop.Text = this.astvMyTree.EnableFixedParentDragDrop ?
+			"DisableFixedParentDragDrop" : "EnableFixedParentDragDrop";
 		}
 
 		#endregion
@@ -87,6 +88,10 @@ namespace Geekees.Common.Controls.Demo
 			this.astvMyTree.EnableFixedDepthDragDrop = !this.astvMyTree.EnableFixedDepthDragDrop;
 		}
 
+		protected void btnEnableFixedParentDragDrop_Click( object sender, EventArgs e )
+		{
+			this.astvMyTree.EnableFixedParentDragDrop = !this.astvMyTree.EnableFixedParentDragDrop;
+		}
 		#endregion
 
 		#region public methods

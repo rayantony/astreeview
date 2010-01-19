@@ -52,7 +52,7 @@
 		<asp:Button ID="btnGetTreeViewXML" CssClass="button" runat="server" Text="GetTreeViewXML" OnClick="btnGetTreeViewXML_Click" />
 		<asp:Button ID="btnToggleMultiLineEdit" CssClass="button" runat="server" Text="EnableMultiLineEdit" OnClick="btnToggleMultiLineEdit_Click" />
 		<asp:Button ID="btnToggleEscapeInput" CssClass="button" runat="server" Text="EnableEscapeInput" OnClick="btnToggleEscapeInput_Click" />
-		<asp:Button ID="btnToggleEnableThreeStateCheckBox" CssClass="button" runat="server" ResKey="EnableThreeStateCheckBox" OnClick="btnEnableThreeStateCheckBox_Click" />
+		<asp:Button ID="btnToggleEnableThreeStateCheckbox" CssClass="button" runat="server" ResKey="EnableThreeStateCheckbox" OnClick="btnEnableThreeStateCheckbox_Click" />
 
     </div>
     
