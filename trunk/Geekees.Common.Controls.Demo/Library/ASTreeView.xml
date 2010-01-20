@@ -1051,6 +1051,14 @@
             	<c>true</c> if [enable leaf only checkbox]; otherwise, <c>false</c>.
             </value>
         </member>
+        <member name="P:Geekees.Common.Controls.ASTreeView.EnablePersistentTreeState">
+            <summary>
+            Gets or sets a value indicating whether to submit the whole treeview state, values on postback. If you want to regenerate treeview on every postback, you may set it false. Generally it should be true to keep the treeview state on postback.
+            </summary>
+            <value>
+            	<c>true</c> if [enable persistent tree state]; otherwise, <c>false</c>.
+            </value>
+        </member>
         <member name="P:Geekees.Common.Controls.ASTreeView.DataSourceDescriptor">
             <summary>
             Gets or sets the data source descriptor. Datasource descriptor converts datasource to treeview nodes.

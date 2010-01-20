@@ -41,7 +41,8 @@
 						EnableCustomizedNodeIcon="false"
 						EnableDebugMode="false"
 						EnableContextMenuAdd="false"
-						EnableParentNodeExpand="true" />
+						EnableParentNodeExpand="true"
+						EnablePersistentTreeState="false" />
 				</td>
 				<td>
 				
