@@ -64,7 +64,7 @@
 		list-style-type:none;
 		vertical-align:middle;
 		line-height:16px;
-		
+		padding-top:2px;
 	}
 	.astreeview-tree li a, .drag-container li a{	/* Node links */
 		color:#000;
@@ -86,9 +86,16 @@
 	
 	.astreeview-tree img
 	{
+		/*
 		border:0;
 		padding:0;
-		margin:0;
+		margin:0;*/
+		vertical-align:middle;
+		margin-top:-4px;
+		margin-top:-3px\9;
+		+margin-top:0px;
+		_margin-top:0px;
+		
 	}
 	
 	.astreeview-plus-minus
@@ -160,4 +167,34 @@
 	{
 		font-style:italic;
 		font-size:10px;
+	}
+	
+/****************  for text node  **********************/
+	
+	/*for li*/
+	.astreeview-text-node
+	{
+	}
+	
+	/*for div inside li*/
+	.astreeview-text-node-container
+	{
+		display:inline-block;
+		display:inline-block\9;
+		+display:inline;
+		_display:inline;
+		font-size:14px;
+		vertical-align:top;
+	}
+	
+	/*for plus minus image*/
+	.astreeview-plus-minus-text
+	{
+		
+	}
+	
+	/*for checkbox image*/
+	.astreeview-checkbox-text
+	{
+		
 	}
