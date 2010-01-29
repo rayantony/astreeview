@@ -1,14 +1,11 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASTreeViewDemo16.aspx.cs" Inherits="Geekees.Common.Controls.Demo.ASTreeViewDemo16" %>
-
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc1" %>
-
 <%@ Register Assembly="ASTreeView" Namespace="Geekees.Common.Controls" TagPrefix="ct" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>ASTreeViewDemo1</title>
+    <title>ASTreeViewDemo16</title>
 	<link href="<%=ResolveUrl("~/javascript/astreeview/astreeview.css")%>" type="text/css" rel="stylesheet" />
 	<link href="<%=ResolveUrl("~/javascript/contextmenu/contextmenu.css")%>" type="text/css" rel="stylesheet" />
 	
@@ -51,7 +48,7 @@
 
     </div>
     
-    <div>
+    <div style="float:left;">
 		<ct:ASTreeView ID="astvMyTree" 
 										runat="server"
 										BasePath="~/Javascript/astreeview/"
