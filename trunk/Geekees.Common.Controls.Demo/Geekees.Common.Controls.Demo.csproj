@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ASTreeView, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ASTreeView, Version=1.5.2.0, Culture=neutral, PublicKeyToken=521e0b4262a9001c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -57,6 +57,7 @@
     <Content Include="ASTreeViewDemo13.aspx" />
     <Content Include="ASTreeViewDemo14.aspx" />
     <Content Include="ASTreeViewDemo15.aspx" />
+    <Content Include="ASTreeViewDemo16.aspx" />
     <Content Include="ASTreeViewDemo2.aspx" />
     <Content Include="ASTreeViewDemo3.aspx" />
     <Content Include="ASTreeViewDemo4.aspx" />
@@ -228,6 +229,13 @@
     </Compile>
     <Compile Include="ASTreeViewDemo15.aspx.designer.cs">
       <DependentUpon>ASTreeViewDemo15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo16.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ASTreeViewDemo16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASTreeViewDemo16.aspx.designer.cs">
+      <DependentUpon>ASTreeViewDemo16.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASTreeViewDemo2.aspx.cs">
       <DependentUpon>ASTreeViewDemo2.aspx</DependentUpon>
