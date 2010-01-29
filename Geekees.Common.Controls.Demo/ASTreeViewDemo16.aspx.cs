@@ -41,7 +41,7 @@ namespace Geekees.Common.Controls.Demo
 			base.OnPreRender( e );
 
 			this.btnToggleDragDrop.Text = this.astvMyTree.EnableDragDrop ?
-			"DisableDragDrop" : "EnableDragDrop";
+				"DisableDragDrop" : "EnableDragDrop";
 
 			this.btnToggleNodeIcon.Text = this.astvMyTree.EnableNodeIcon ?
 				"DisableNodeIcon" : "EnableNodeIcon";
@@ -97,11 +97,14 @@ namespace Geekees.Common.Controls.Demo
 		/// </summary>
 		private void InitializeComponent()
 		{
+
 			this.astvMyTree.ContextMenu.MenuItems.Add( new ASContextMenuItem( "Custom Menu", "alert('current value:' + " + this.astvMyTree.ContextMenuClientID + ".getSelectedItem().parentNode.getAttribute('treeNodeValue')" + ");return false;", "text" ) );
+
 		}
 
 		private void GenerateTree()
 		{
+
 			this.astvMyTree.RootNode
 				.AppendChild( new ASTreeViewTextNode( "<span isTreeNodeChild='true' style='color:#124AC8;font-weight:bold;'>G</span><span isTreeNodeChild='true' style='color:#EF5344;font-weight:bold;'>o</span><span isTreeNodeChild='true' style='color:#D7A703;font-weight:bold;'>o</span><span isTreeNodeChild='true' style='color:#2E4F90;font-weight:bold;'>g</span><span isTreeNodeChild='true' style='color:#406A3F;font-weight:bold;'>l</span><span isTreeNodeChild='true' style='color:#C31402;font-weight:bold;'>e</span>" )
 									.AppendChild( new ASTreeViewLinkNode( "LinkNode 1", "ln1", "http://www.ask.com", "frm", "Goto ask.com", "~/Images/demoIcons/hummer.gif" ) )
@@ -116,7 +119,7 @@ namespace Geekees.Common.Controls.Demo
 				)
 				.AppendChild( new ASTreeViewTextNode( "Clock:<span id='sClock'></span><script>window.setInterval('var cur_date = new Date();var cur_hour = cur_date.getHours();var cur_min = cur_date.getMinutes();var cur_sec = cur_date.getSeconds();document.getElementById(\"sClock\").innerHTML = cur_hour + \":\" + cur_min + \":\" +cur_sec;',1000);</script>" )/*.AppendChild( n )*/ )
 				.AppendChild( new ASTreeViewTextNode( "<font style='color:blue;font-weight:bold;font-style:italic;' isTreeNodeChild='true'>ASTreeView</font>" ) )
-				.AppendChild( new ASTreeViewTextNode( "<div isTreeNodeChild='true' style='width:200px;height:100px;border:1px solid green;margin-top:0px\\9;margin-left:0px\\9;+margin-top:-18px;+margin-left:48px;_margin-top:-18px;_margin-left:48px;'><p>Block Element Line 1</p><p>Block Element Line 2</p></div>" )
+				.AppendChild( new ASTreeViewTextNode( "<div isTreeNodeChild='true' style='width:200px;height:100px;border:1px solid green;margin-top:0px\\9;margin-left:0px\\9;+margin-top:-18px;+margin-left:48px;_margin-left:48px;_margin-top:-18px;'><p>Block Element Line 1</p><p>Block Element Line 2</p></div>" )
 				);
 		}
 		#endregion
